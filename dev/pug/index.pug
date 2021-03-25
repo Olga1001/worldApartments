@@ -1,0 +1,72 @@
+extends layout/main
+
+block variables
+	-var title = 'Главная страница'
+
+block content
+	main.main
+		section.first-section
+			.container
+				h1.title.c-white Найти недвижимость:
+
+				include layout/search-property
+
+		section.second-section 
+			.container 
+				.flex-center-between 
+					h2.title2 Новостройки
+					a.link(href="#") Смотреть все новостройки
+
+				.slider.hidden-xy 
+					.slider-container
+						.slider-arrows
+							button.arrow.arrow-prev(type="button")
+								+icon("arrow-left","c-gray")
+							button.arrow.arrow-next(type="button")
+								+icon("arrow-right","c-gray")
+						.d-flex 
+							- 
+								cardNewBuilding = [
+									{
+										img: 'newbuilding.jpg',
+										title: 'ЖК «Миллениум»',
+										metro: 'Авиамоторная',
+										duration: '7 мин',
+										price: 'от 10 131 660 ₽'
+									},
+									{
+										img: 'newbuilding.jpg',
+										title: 'ЖК «Миллениум»',
+										metro: 'Авиамоторная',
+										duration: '7 мин',
+										price: 'от 11 131 660 ₽'
+									},
+									{
+										img: 'newbuilding.jpg',
+										title: 'ЖК «Миллениум»',
+										metro: 'Авиамоторная',
+										duration: '7 мин',
+										price: 'от 11 131 660 ₽'
+									},
+									{
+										img: 'newbuilding.jpg',
+										title: 'ЖК «Миллениум»',
+										metro: 'Авиамоторная',
+										duration: '7 мин',
+										price: 'от 1 131 660 ₽'
+									}
+								]
+							each val in cardNewBuilding
+								+cardNewBuilding(val.img,val.title,val.metro,val.duration,val.price)
+
+					nav.dots 
+						-var dots = 4
+						ul
+							while dots--
+								li(class=dots==3 ? 'active': ' ')
+									button(type='button')
+									
+		section.third-section 
+			.container 
+				h2.title2 Полезные ссылки
+

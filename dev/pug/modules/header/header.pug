@@ -1,0 +1,61 @@
+header.header
+    .header-top
+        .container
+            .flex-center-between 
+                .align-items-center
+                    .select-city 
+                        .align-items-center 
+                            +icon("location")
+                            p.fw-bold.mx-10.fs-12 Киев
+                            +icon("arrow-down")
+                    nav.navtop 
+                        ul.menu 
+                            each val in ['Ипотека','Цены','Журнал']
+                                li.menu-item 
+                                    a.menu-link(href="#")=val
+                .align-items-center 
+                    a.align-items-center.fw-bold.fs-12.mr-10(href="#") 
+                        +icon("heart","c-gray mx-10")
+                        span.c-gray Избранное
+                    a.align-items-center.fw-bold.fs-12.ml-15(href="#") 
+                        +icon("notification","c-gray mx-10")
+                        span.c-gray Уведомления
+    .header-main 
+        .container 
+            .flex-center-between 
+                .align-items-center
+                    a.logo(href="#") 
+                    button.burger 
+                        span.burger-line.burger-line-top
+                        span.burger-line.burger-line-center
+                        span.burger-line.burger-line-bottom
+                    nav.navmain 
+                        .d-md-none.navmain-head 
+                            .flex-center-between
+                                .align-items-center 
+                                    +icon("location")
+                                    p.fw-bold.mx-10 Киев
+                                a.link(href="#") Изменить город
+
+                        ul.menumain 
+                            each val in ['ПРОДАЖА','АРЕНДА','НОВОСТРОЙКИ']
+                                li.menumain-item 
+                                    a.menumain-link(href="#")=val 
+                        ul.menumain.d-md-none      
+                            each val in ['ИПОТЕКА','ЦЕНЫ','ЖУРНАЛ']
+                                li.menumain-item 
+                                    a.menumain-link(href="#")=val 
+                .align-items-center
+                    a.btn1(href="#") 
+                        +icon("plus")
+                        span.c-green.d-md-block.d-none ОБЪЯВЛЕНИЕ
+                    a.btn1.d-md-none(href="#") 
+                        +icon("heart", "c-gray")
+                    a.btn1(href="#") 
+                        +icon("exit")
+                        span.c-green.d-md-block.d-none ВХОД
+                
+
+                
+                
+

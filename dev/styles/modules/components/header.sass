@@ -1,0 +1,74 @@
+.header
+    background-color: $bg-white
+    &-top 
+        padding: 16px 0 
+        border-bottom: 1px solid #E6E6E6
+    &-main 
+        padding: 20px 0
+        box-shadow: $shadow
+        position: relative
+        transition: all 0.3s ease
+        border-bottom: 1px solid transparent
+        &.shadow 
+            box-shadow: none
+            border-color: #E6E6E6
+
+.menu 
+    display: flex 
+    align-items: center 
+    &-link 
+        font-weight: bold
+        font-size: 12px
+        line-height: 13px
+        color: $gray 
+        margin: 0 11px
+
+.logo 
+    background: url("../img/logo/logo.png") no-repeat left center / contain
+    +box(204px,51px)
+
+.navmain
+    margin: 0 57.5px
+    &-head 
+        border-bottom: 1px solid #E6E6E6
+        padding: 20px 40px
+        margin-bottom: 40px
+
+.menumain
+    display: flex 
+    align-items: center 
+    &-link 
+        font-weight: bold
+        margin: 0 12.5px
+
+.select-city
+  margin-right: 16px
+
+.burger
+    +box(50px)
+    position: relative
+    flex-shrink: 0
+    z-index: 9
+    background: #F7F7F7
+    border-radius: 50%
+    &-line
+        background-color: $green
+        +centerX
+        +box(18px,2px)
+        transition: all 0.3s ease
+        &-top
+            top: 18px
+        &-center
+            top: 50% 
+            transform: translate(-50%,-50%)
+        &-bottom
+            bottom: 18px
+    &.active 
+        .burger-line-top
+            top: 50% 
+            transform: translate(-50%,-50%) rotate(227deg)
+        .burger-line-center
+            opacity: 0
+        .burger-line-bottom
+            top: 50% 
+            transform: translate(-50%,-50%) rotate(-227deg)

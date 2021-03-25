@@ -1,0 +1,29 @@
+.card 
+    width: 370px
+    margin-right: 30px
+    flex-shrink: 0
+    position: relative
+    img 
+        +box(100%,240px)
+        object-fit: cover
+        background: #C4C4C4
+        border-radius: 7px
+        margin-bottom: 20px
+
+.price 
+    background: rgba(0, 173, 100, 0.05)
+    border-radius: 5px
+    padding: 2px 9px
+
+.favorites
+    +box(40px)
+    border-radius: 7px
+    background: rgba($bg-white, 0.5)
+    backdrop-filter: blur(7px)
+    position: absolute 
+    top: 20px 
+    right: 20px
+    +d-flex(center)
+    z-index: 2
+    svg 
+        +box(20px)

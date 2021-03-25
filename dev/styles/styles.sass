@@ -1,0 +1,88 @@
+@import "utils/libs"
+@import "utils/vars"
+@import "utils/mixins"
+@import "utils/fonts"
+@import "utils/sprite"
+@import "utils/base"
+
+.container 
+  max-width: $desktop
+  width: 100% 
+  margin: 0 auto 
+  padding: 0 40px
+
+.link
+  font-weight: bold
+  color: $green
+  border-bottom: 1px solid #00AD64
+  line-height: 15.4px
+
+.title, h1 
+  font-weight: bold
+  font-size: 35px
+  line-height: 39px
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.19)
+
+.title2, h2 
+  font-weight: bold
+  font-size: 24px
+  line-height: 26px
+  
+.select
+  width: 100%
+  background: #F5F5F5
+  border-radius: 5px
+  position: relative
+  &-item
+    +d-flex(space-between, center)
+    padding: 17px 20px
+    font-size: 16px
+    line-height: 165%
+    cursor: pointer
+  &-drop 
+    position: absolute
+    top: 100% 
+    left: 0 
+    background: #F5F5F5
+    width: 100%
+    padding: 7px 0
+    display: none
+  &-option 
+    padding: 10px 20px
+    cursor: pointer
+
+.checkbox 
+  display: none 
+  &:checked ~ .tab 
+    box-shadow: 8px 0px 20px rgba(205, 205, 205, 0.29)
+    color: $black
+
+.tab 
+  font-weight: bold
+  color: $gray
+  padding: 22px 30px
+  cursor: pointer
+  display: block
+
+@import "modules/modules"
+ 
+.hidden-xy
+  overflow: hidden
+
+.relative
+  position: relative
+
+// .w-33
+//   width: 33% 
+
+// .w-50
+//   width: 50% 
+
+// .w-100
+//   width: 100%
+
+// .w-fit-content 
+//   width: fit-content
+
+
+@import "utils/media"

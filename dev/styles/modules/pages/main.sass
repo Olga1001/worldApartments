@@ -1,0 +1,43 @@
+.first-section
+    background: url("../img/common/bg-first.png") no-repeat center / cover
+    min-height: 581px
+    padding: 103px 0
+
+.second-section 
+    padding: 50px 0
+
+.slider
+    margin: 0 -30px 
+    padding-top: 35px
+    &-container
+        position: relative
+        padding: 0 30px
+
+.dots 
+    margin-top: 50px
+    ul 
+        +d-flex(center)
+    li.active 
+        button 
+            background: $green
+    button 
+        +box(10px)
+        background: #E6E6E6
+        border-radius: 50% 
+        margin: 0 6px
+
+.arrow 
+    +centerY
+    border-radius: 50% 
+    +box(50px)
+    background: $bg-white
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15)
+    +d-flex(center)
+    z-index: 2
+    margin-top: -43px
+    svg 
+        +box(13px)
+    &-prev 
+        left: 10px
+    &-next 
+        right: 10px

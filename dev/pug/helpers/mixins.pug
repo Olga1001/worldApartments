@@ -1,0 +1,32 @@
+mixin icon(name,mod,fs)
+	if(mod)
+		svg(class="svg-sprite-icon icon-" + name + ' ' + mod)
+			use(xlink:href="img/sprite/symbol/sprite.svg#" + name)
+	else
+		svg(class="svg-sprite-icon icon-" + name)
+			use(xlink:href="img/sprite/symbol/sprite.svg#" + name)
+
+mixin breadcrumbs-item(text,href)
+	li.breadcrumbs__item
+		if(href)
+			a.breadcrumbs__link(href=href)
+				span=text
+			+icon("arrow-right","ml-auto")
+		else
+			span.breadcrumbs__text=text
+
+mixin cardNewBuilding(img,title,metro,duration,price)
+	.card 
+		button.favorites(type="button")
+			+icon("heart", "c-white")
+		a(href="#") 
+			img(src="img/common/"+img, alt=title)
+		a.fs-20.fw-bold.mb-5(href="#")=title
+		.flex-sm-center-between.d-flex.flex-wrap 
+			.align-items-center.mr-20.mt-10
+				+icon("metro", "c-gray mr-10")
+				p=metro
+			.align-items-center.mr-20.mt-10
+				+icon("man", "c-gray mr-10")
+				p=duration
+			.price.mt-10=price

@@ -1,0 +1,44 @@
+.search 
+    .d-flex 
+        label 
+            input.checkbox(type="radio" name="radio" checked)
+            span.tab КУПИТЬ
+        label 
+            input.checkbox(type="radio" name="radio")
+            span.tab СНЯТЬ
+
+    form 
+        .flex-wrap.justify-content-between 
+            .form-col
+                .relative
+                    input(type="text" placeholder="Город, адрес, метро, район  или ЖК")
+                    button.btn-reset(type="reset")
+                        +icon("reset", "c-gray")
+            .form-col
+                .select
+                    .select-item 
+                        span Квартира
+                        +icon("arrow-down")
+                    .select-drop 
+                        ul.select-menu 
+                            li.select-option.active Квартира
+                            li.select-option Комната
+                            li.select-option Дом
+            .form-col
+                .select
+                    .select-item 
+                        span 1-комн.
+                        +icon("arrow-down")
+                    .select-drop 
+                        ul.select-menu 
+                            li.select-option.active 1-комн.
+                            li.select-option 2-комн.
+                            li.select-option 3-комн.
+            .form-col
+                .relative.form-price
+                    input(type="text" placeholder="65 732 269")
+            .btns
+                button.btn-morefilter.mb-20(type="button") ЕЩЕ ФИЛЬТРЫ
+                    +icon("arrow-down")
+                button.btn.mb-20.ml-md-20(type="submit") НАЙТИ
+

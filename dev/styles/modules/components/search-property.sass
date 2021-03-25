@@ -1,0 +1,47 @@
+.search 
+    background: $bg-white
+    border-radius: 10px
+    margin-top: 40px
+    overflow: hidden
+    form 
+        padding: 30px 30px 10px 30px
+        background: $bg-white
+        position: relative
+        z-index: 2
+
+.form-col
+    margin-bottom: 20px
+    &:first-child
+        width: 40%
+    &:nth-child(2)
+        width: 20.8%
+    &:nth-child(3)
+        width: 16%
+    &:nth-child(4)
+        width: 100%
+        max-width: 200px
+
+.form-price
+    input 
+        padding: 17px 49px
+    &:before 
+        content: 'До'
+        +centerY 
+        left: 20px 
+        font-size: 16px
+        line-height: 165%
+        color: $black
+        pointer-events: none
+    &:after 
+        content: ''
+        background: url("../img/common/rub.svg") no-repeat center / contain
+        +centerY 
+        right: 20px 
+        font-size: 16px
+        line-height: 165%
+        color: $black
+        pointer-events: none
+        +box(12px)
+
+.btns 
+    width: 100% 
