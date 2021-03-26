@@ -22,11 +22,26 @@ mixin cardNewBuilding(img,title,metro,duration,price)
 		a(href="#") 
 			img(src="img/common/"+img, alt=title)
 		a.fs-20.fw-bold.mb-5(href="#")=title
-		.flex-sm-center-between.d-flex.flex-wrap 
+		.flex-sm-center-between.flex-wrap 
 			.align-items-center.mr-20.mt-10
 				+icon("metro", "c-gray mr-10")
 				p=metro
 			.align-items-center.mr-20.mt-10
 				+icon("man", "c-gray mr-10")
 				p=duration
-			.price.mt-10=price
+			p.price.mt-10=price
+
+mixin cardNewAds(img,price,info,info2,location)
+	.card.card__new-ads 
+		button.favorites(type="button")
+			+icon("heart", "c-white")
+		a(href="#") 
+			img(src="img/common/"+img, alt="")
+		.card_bottom
+			a.fs-20.fw-bold.mb-5(href="#")=price
+			.flex-wrap 
+				p.mr-20.mt-10=info
+				p.mr-20.mt-10=info2
+			.align-items-center.mt-10
+				+icon("location", "c-black mr-10")
+				p.text-nowrap=location

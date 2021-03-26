@@ -15,7 +15,8 @@ block content
 			.container 
 				.flex-center-between 
 					h2.title2 Новостройки
-					a.link(href="#") Смотреть все новостройки
+					a.link(href="#") Смотреть все 
+						span.d-sm-inline.d-none новостройки
 
 				.slider.hidden-xy 
 					.slider-container
@@ -24,7 +25,7 @@ block content
 								+icon("arrow-left","c-gray")
 							button.arrow.arrow-next(type="button")
 								+icon("arrow-right","c-gray")
-						.d-flex 
+						.d-flex.scroll-x 
 							- 
 								cardNewBuilding = [
 									{
@@ -69,4 +70,102 @@ block content
 		section.third-section 
 			.container 
 				h2.title2 Полезные ссылки
-
+				.flex-wrap.mt-10 
+					.card__useful-links
+						p.fs-20.fw-bold Продажа квартир
+						ul.list-links.mt-10
+							each val in [{item1: '1-комнатные', item2: '2 501'},{item1: '2-комнатные', item2: '2 501'},{item1: '3-комнатные', item2: '2 501'},{item1: '4-комнатные', item2: '2 501'},{item1: 'Студии', item2: '2 501'},]
+								li.list-links__item
+									a.flex-center-between(href="#")
+										span=val.item1
+										span.c-gray=val.item2
+					.card__useful-links
+						p.fs-20.fw-bold Аренда квартир
+						ul.list-links.mt-10
+							each val in [{item1: '1-комнатные', item2: '2 501'},{item1: '2-комнатные', item2: '2 501'},{item1: '3-комнатные', item2: '2 501'},{item1: '4-комнатные', item2: '2 501'},{item1: 'Студии', item2: '2 501'},]
+								li.list-links__item
+									a.flex-center-between(href="#")
+										span=val.item1
+										span.c-gray=val.item2
+							
+					.card__useful-links(style="background-image: url(img/common/newbuilding2_1.png)")
+						p.fs-20.fw-bold Новостройки
+						ul.list-links.mt-10
+							each val in ['Сдача до конца года','Сдача до 2022', 'Сдача до 2023']
+								li.list-links__item.w-fit-content
+									a(href="#")=val
+				.flex-wrap 
+					.card__useful-links.big(style="background-image: url(img/common/newbuilding3.png)")
+						p.fs-20.fw-bold Чаще всего ищут
+						ul.list-links.mt-10
+							each val in ['Продажа жилой недвижимости','Вторичное жилье', '2-комнатные','1-комнатные', 'Дома']
+								li.list-links__item.w-fit-content
+									a(href="#")=val
+					.card__useful-links
+						p.fs-20.fw-bold Загородная недвижимость
+						ul.list-links.mt-10
+							each val in [{item1: 'Дома', item2: '2 501'},{item1: 'Таунхаусы', item2: '2 501'},{item1: 'Части дома', item2: '2 501'},{item1: 'Земельные участки', item2: '2 501'},{item1: 'Коттеджи', item2: '2 501'}]
+								li.list-links__item
+									a.flex-center-between(href="#")
+										span=val.item1
+										span.c-gray=val.item2
+									
+		section.fourth-section 
+			.box
+				.flex-center-between
+					h2.title2 Новые объявления
+					a.link(href="#") Смотреть все 
+						span.d-sm-inline.d-none объявления
+				.slider.hidden-xy 
+					.slider-container
+						.slider-arrows
+							button.arrow.arrow-prev(type="button")
+								+icon("arrow-left","c-gray")
+							button.arrow.arrow-next(type="button")
+								+icon("arrow-right","c-gray")
+						.d-flex.scroll-x 
+							- 
+								cardNewAds = [
+									{
+										img: 'newbuilding.jpg',
+										price: '1 731 660 ₽',
+										info: '2-комн. квартира',
+										info2: '40 м²',
+										location: 'Москва, поселение Сосенское',
+									},
+									{
+										img: 'newbuilding.jpg',
+										price: '1 731 660 ₽',
+										info: '2-комн. квартира',
+										info2: '40 м²',
+										location: 'Москва, поселение Сосенск...',
+									},
+									{
+										img: 'newbuilding.jpg',
+										price: '1 731 660 ₽',
+										info: '2-комн. квартира',
+										info2: '40 м²',
+										location: 'Москва, поселение Сосенск...',
+									},
+									{
+										img: 'newbuilding.jpg',
+										price: '1 731 660 ₽',
+										info: '2-комн. квартира',
+										info2: '40 м²',
+										location: 'Москва, поселение Сосенск...',
+									}
+								]
+							each val in cardNewAds
+								+cardNewAds(val.img,val.price,val.info,val.info2,val.location)
+					nav.dots 
+						-var dots = 4
+						ul
+							while dots--
+								li(class=dots==3 ? 'active': ' ')
+									button(type='button')
+		section.fifth-section 
+			.box
+				h2.title2.mb-20 Поиск на карте
+				p.fs-16.pb-30 Ищите жилье рядом с парком, <br> родственниками или за городом
+				a.btn2.w-fit-content(href="#") 
+					span.c-green ПОСМОТРЕТЬ НА КАРТЕ
