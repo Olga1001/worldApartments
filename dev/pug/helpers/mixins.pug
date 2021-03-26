@@ -45,3 +45,18 @@ mixin cardNewAds(img,price,info,info2,location)
 			.align-items-center.mt-10
 				+icon("location", "c-black mr-10")
 				p.text-nowrap=location
+
+mixin cardNewNews(img,date,eye,link)
+	.card.card__new-news
+		a(href="#") 
+			img(src="img/common/"+img, alt="")
+		.card_bottom
+			.align-items-center 
+				.align-items-center.mr-15 
+					+icon("calendar","c-gray")
+					span.fs-12.c-gray=date
+				.align-items-center 
+					+icon("eye","c-gray")
+					span.fs-12.c-gray=eye
+			a.fw-bold.mt-10.line-clamp(href="#")=link
+

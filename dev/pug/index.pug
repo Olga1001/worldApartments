@@ -169,3 +169,53 @@ block content
 				p.fs-16.pb-30 Ищите жилье рядом с парком, <br> родственниками или за городом
 				a.btn2.w-fit-content(href="#") 
 					span.c-green ПОСМОТРЕТЬ НА КАРТЕ
+									
+		section.fourth-section 
+			.box
+				.flex-center-between
+					h2.title2 Актуальные новости
+					a.link(href="#") Смотреть все 
+						span.d-sm-inline.d-none новости
+				.slider.hidden-xy 
+					.slider-container
+						.slider-arrows
+							button.arrow.arrow-prev(type="button")
+								+icon("arrow-left","c-gray")
+							button.arrow.arrow-next(type="button")
+								+icon("arrow-right","c-gray")
+						.d-flex.scroll-x 
+							- 
+								cardNewNews = [
+									{
+										img: 'newbuilding.jpg',
+										date: '1 Май 2020',
+										eye: '800 просмотров',
+										link: 'В январе банки выдали рекордное число ипотечных кредитов',
+									},
+									{
+										img: 'newbuilding.jpg',
+										date: '1 Май 2020',
+										eye: '800 просмотров',
+										link: 'Эксперты рассказали, какие кухни продаются в новостройках Московск',
+									},
+									{
+										img: 'newbuilding.jpg',
+										date: '1 Май 2020',
+										eye: '800 просмотров',
+										link: 'Эксперты назвали жилые комплексы Новой Москвы с новыми форматами',
+									},
+									{
+										img: 'newbuilding.jpg',
+										date: '1 Май 2020',
+										eye: '800 просмотров',
+										link: 'В январе банки выдали рекордное число ипотечных кредитов',
+									},
+								]
+							each val in cardNewNews
+								+cardNewNews(val.img,val.date,val.eye,val.link)
+					nav.dots 
+						-var dots = 4
+						ul
+							while dots--
+								li(class=dots==3 ? 'active': ' ')
+									button(type='button')

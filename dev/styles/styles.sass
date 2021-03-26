@@ -21,6 +21,9 @@
   line-height: 15.4px
   white-space: nowrap
 
+.link2
+  text-decoration-line: underline
+
 .title, h1 
   font-weight: bold
   font-size: 35px
@@ -43,6 +46,9 @@
     font-size: 16px
     line-height: 165%
     cursor: pointer
+    &.active 
+      .icon-arrow-down
+        transform: scaleY(-1)
   &-drop 
     position: absolute
     top: 100% 
@@ -51,6 +57,8 @@
     width: 100%
     padding: 7px 0
     display: none
+    max-height: 150px
+    overflow-y: auto
   &-option 
     padding: 10px 20px
     cursor: pointer
@@ -88,5 +96,34 @@
 .w-fit-content 
   width: fit-content
 
+
+.line-clamp
+  display: block
+  display: -webkit-box
+  -webkit-box-orient: vertical
+  position: relative
+  font-size: 16px
+  line-height: 26.4px
+  overflow: hidden
+  text-overflow: ellipsis
+
+.line-clamp:after
+  content: '...'
+  text-align: center
+  bottom: 0
+  right: 0
+  width: 25%
+  display: block
+  position: absolute
+  height: calc(1em * 26.4px)
+  color: $gray
+  background: linear-gradient(to left, rgba(241, 242, 246, 0.1), rgba(241, 242, 246, 0.5) 75%)
+
+@supports (-webkit-line-clamp: 2)
+  .line-clamp:after
+    display: none !important
+  .line-clamp
+    -webkit-line-clamp: 2
+    height: calc(1em * 26.4px * 2)
 
 @import "utils/media"

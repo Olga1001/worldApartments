@@ -15,21 +15,21 @@
                     button.btn-reset(type="reset")
                         +icon("reset", "c-gray")
             .form-col
-                .select
+                .select.stopPropagation
                     .select-item 
                         span Квартира
                         +icon("arrow-down")
-                    .select-drop 
+                    .select-drop  
                         ul.select-menu 
                             li.select-option.active Квартира
                             li.select-option Комната
                             li.select-option Дом
             .form-col
-                .select
+                .select.stopPropagation
                     .select-item 
                         span 1-комн.
                         +icon("arrow-down")
-                    .select-drop 
+                    .select-drop
                         ul.select-menu 
                             li.select-option.active 1-комн.
                             li.select-option 2-комн.
