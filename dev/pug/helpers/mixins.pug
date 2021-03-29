@@ -38,7 +38,7 @@ mixin cardNewAds(img,price,info,info2,location)
 		a(href="#") 
 			img(src="img/common/"+img, alt="")
 		.card_bottom
-			a.fs-20.fw-bold.mb-5(href="#")=price
+			a.fs-20.fw-bold(href="#")=price
 			.flex-wrap 
 				p.mr-20.mt-10=info
 				p.mr-20.mt-10=info2
@@ -51,12 +51,12 @@ mixin cardNewNews(img,date,eye,link)
 		a(href="#") 
 			img(src="img/common/"+img, alt="")
 		.card_bottom
-			.align-items-center 
+			.align-items-center.mb-15 
 				.align-items-center.mr-15 
 					+icon("calendar","c-gray")
 					span.fs-12.c-gray=date
 				.align-items-center 
 					+icon("eye","c-gray")
 					span.fs-12.c-gray=eye
-			a.fw-bold.mt-10.line-clamp(href="#")=link
+			a.fw-bold.line-clamp(href="#")=link
 

@@ -219,3 +219,24 @@ block content
 							while dots--
 								li(class=dots==3 ? 'active': ' ')
 									button(type='button')
+
+	.popup(data-popup="filter")
+		.popup-container 
+			.popup-head.flex-center-between
+				p.popup-title Все фильтры
+				button.btn-close(type="button")
+					+icon("close")
+			.popup-body 
+				.flex-wrap.popup-body_row 
+					.col 
+						p.text1.mb-15 Тип недвижимости
+						.select.stopPropagation
+							.select-item 
+								span Не выбрано
+								+icon("arrow-down")
+							.select-drop
+								ul.select-menu 
+									li.select-option.active Квартира
+									li.select-option Дом
+
+			.popup-footer 

@@ -13,8 +13,8 @@ $(document).ready(function () {
   }); // select
 
   $(".select-item").click(function () {
-    $(this).toggleClass('active');
-    $(this).siblings(".select-drop").slideToggle(300);
+    $(this).toggleClass('active').parents().siblings().find(".select-item").removeClass('active');
+    $(this).siblings(".select-drop").slideToggle(300).parents().siblings().find(".select-drop").slideUp(300);
   });
   $("html, body").click(function () {
     $(".select-item").removeClass('active');

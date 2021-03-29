@@ -1,9 +1,13 @@
 footer.footer
     .container 
         .flex-center-between 
-            h2.title2 Недвижимость по всей России
-            a.link(href="#") Смотреть полный список
-        .footer-row.flex-wrap.justify-md-content-between
+            h2.title2 Недвижимость 
+                span.text-nowrap по всей 
+                | России
+            a.link(href="#") Смотреть 
+                span.d-sm-inline.d-none полный список
+                span.d-sm-none все
+        .footer-row.d-flex
             ul.footer-col 
                 each val in ['Новокузнецк','Тверь','Новороссийск','Казань','Саратов']
                     li  
@@ -24,19 +28,23 @@ footer.footer
                 each val in ['Саранск','Липецк','Воронеж','Тула','Рязань']
                     li  
                         a(href="#")=val
-        .footer-bottom 
-            .flex-center-between 
-                ul.flex-wrap 
+        .footer-bottom
+            .footer-bottom_t_row
+                ul.flex-wrap.justify-content-center.footer_m
                     each val, index in ['ПРОДАЖА','АРЕНДА','НОВОСТРОЙКИ','ИПОТЕКА','ЦЕНЫ','ЖУРНАЛ']
-                        li.mb-20(class=index==(val.length - 1)? '':'mr-25') 
+                        li.mb-20.footer_m-item
                             a.fw-bold.c-gray(href="#")=val
-                ul.d-flex
-                    each val in ['viber','youtube','twitter','telegram','instagram','facebook']
-                        li.mb-20 
-                            a(href="#") 
-                                +icon(val,"social c-gray")
-            .flex-center-between.flex-wrap 
-                p.c-gray © ООО «Мир квартир», 2008 — 2021
-                .align-items-center
-                    a.link2(href="#") Условия использования
-                    a.link2.ml-30(href="#") Конфиденциальность
+                .justify-content-mmd-between.justify-content-center
+                    ul.socials.flex-wrap
+                        each val in ['viber','youtube','twitter','telegram','instagram','facebook']
+                            li.mb-20 
+                                a(href="#") 
+                                    +icon(val,"social c-gray")
+                    
+                    a.d-lg-none.d-mmd-block.d-none.link2.ml-30(href="#") Конфиденциальность
+                    
+            .flex-center-between.flex-wrap.flex-mmd-row.flex-column-reverse 
+                p.c-gray.footer-license © ООО «Мир квартир», 2008 — 2021
+                .align-items-sm-center.text-center
+                    a.link2.mb-15(href="#") Условия использования
+                    a.d-lg-block.d-mmd-none.link2.ml-sm-30(href="#") Конфиденциальность
