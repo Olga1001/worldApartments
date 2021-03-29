@@ -27,4 +27,15 @@ $(document).ready(function () {
     $(".select-item").removeClass('active');
     $(".select-drop").slideUp(300);
   });
+
+  // popups show
+  $("[data-btn-popup]").click(function () {
+    let data = $(this).data("btn-popup");
+    $('[data-popup="'+ data +'"]').addClass('active');
+  });
+
+  // popups hide
+  $(".btn-close, .popup").click(function () {
+    $(".popup").removeClass('active');
+  });
 });

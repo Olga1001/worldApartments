@@ -5,238 +5,124 @@ block variables
 
 block content
 	main.main
-		section.first-section
+		section.sixth-section
 			.container
-				h1.title.c-white Найти недвижимость:
 
 				include layout/search-property
 
-		section.second-section 
-			.container 
-				.flex-center-between 
-					h2.title2 Новостройки
-					a.link(href="#") Смотреть все 
-						span.d-sm-inline.d-none новостройки
+		section.ads-section
+			.container
+				.ads-section_col.list 
+					#map
+						img(src="img/common/map.jpg", alt="map" width="100%" height="100%") 
+					.flex-center-between.mb-5 
+						div
+							h2.title2.mb-20 55 632 объявлений
+							.d-flex 
+								p.fs-16.mr-5 Сортировка:
+								.select.select-normal.stopPropagation
+									.select-item 
+										span.c-green Рекомендуемые
+										+icon("arrow-down", "c-green")
+									.select-drop
+										ul.select-menu 
+											each val, index in ['Рекомендуемые', 'Популярные']
+												li.select-option(class=index==0?'active':'')=val
+						button.btn4(type="button")
+							+icon("list","c-green")
+							span.c-green.fw-bold СПИСКОМ
+					.ads_scroll-y 
+						- 
+							cardAds = [
+								{
+									img: 'img.jpg',
+									info1: '2-комн.кв.',
+									info2: '40 м² ',
+									info3: '5/12 этаж',
+									price: '12 700 000 ₽',
+									area: '237 451 ₽/м² ',
+								},
+								{
+									img: 'img.jpg',
+									info1: '2-комн.кв.',
+									info2: '40 м² ',
+									info3: '5/12 этаж',
+									price: '12 700 000 ₽',
+									area: '237 451 ₽/м² ',
+								},
+								{
+									img: 'img.jpg',
+									info1: '2-комн.кв.',
+									info2: '40 м² ',
+									info3: '5/12 этаж',
+									price: '12 700 000 ₽',
+									area: '237 451 ₽/м² ',
+								},
+								{
+									img: 'img.jpg',
+									info1: '2-комн.кв.',
+									info2: '40 м² ',
+									info3: '5/12 этаж',
+									price: '12 700 000 ₽',
+									area: '237 451 ₽/м² ',
+								}
+							]
+						each val in cardAds 
+							+cardAds(val.img,val.info1,val.info2,val.info3,val.price,val.area)
+					ul.list-cards__ads
+						-var card = 4
+						while card--
+							li.card__ads-list
+								.slider2.d-md-flex 
+									.slider-for
+										-var n = 4
+										while n--
+											img(src="img/common/img.jpg", alt="img" )
+									.slider-nav
+										-var n = 3
+										while n--
+											.slider-nav_slide.active
+												img(src="img/common/img.jpg", alt="img")
+										.slider-nav_slide.active
+											img(src="img/common/img.jpg", alt="img")
+											button.btn-more-slide(type="button") +20
+										.slider-nav_slide
+											img(src="img/common/img.jpg", alt="img")
+								.card__ads-list_content 
+									.w-100
+										.justify-content-between 
+											div 
+												p.fs-20.fw-bold.mb-5 12 700 000 ₽
+												p.c-gray.mb-5 237 451 ₽/м² 
+											.align-items-center.h-fit 
+												+icon("time","mr-5 c-gray")
+												p.c-gray.fs-12 22 дня назад
+										.card__ads-list_info
+											p 
+												span.mr-15 2-комн.кв.
+												span.mr-15 40 м² 
+												span 5/12 этаж
+										.card__ads-list_info.align-items-center 
+											.align-items-center.mr-15 
+												+icon("location","mr-5 c-black")
+												p Москва, ул. Ясеневая 27/25
+											.align-items-center.mr-15  
+												+icon("metro","mr-5 c-gray")
+												p Авиамоторная
+											.align-items-center 
+												+icon("man","mr-5 c-gray")
+												p.c-gray 7 мин
+									.d-flex
+										a.btn2.lh-45.mr-10(href="#") 
+											span.c-green ПОКАЗАТЬ КОНТАКТЫ
+										button.favorites.__v3(type="button")
+											+icon("heart", "c-gray")
 
-				.slider.hidden-xy 
-					.slider-container
-						.slider-arrows
-							button.arrow.arrow-prev(type="button")
-								+icon("arrow-left","c-gray")
-							button.arrow.arrow-next(type="button")
-								+icon("arrow-right","c-gray")
-						.d-flex.scroll-x 
-							- 
-								cardNewBuilding = [
-									{
-										img: 'newbuilding.jpg',
-										title: 'ЖК «Миллениум»',
-										metro: 'Авиамоторная',
-										duration: '7 мин',
-										price: 'от 10 131 660 ₽'
-									},
-									{
-										img: 'newbuilding.jpg',
-										title: 'ЖК «Миллениум»',
-										metro: 'Авиамоторная',
-										duration: '7 мин',
-										price: 'от 11 131 660 ₽'
-									},
-									{
-										img: 'newbuilding.jpg',
-										title: 'ЖК «Миллениум»',
-										metro: 'Авиамоторная',
-										duration: '7 мин',
-										price: 'от 11 131 660 ₽'
-									},
-									{
-										img: 'newbuilding.jpg',
-										title: 'ЖК «Миллениум»',
-										metro: 'Авиамоторная',
-										duration: '7 мин',
-										price: 'от 1 131 660 ₽'
-									}
-								]
-							each val in cardNewBuilding
-								+cardNewBuilding(val.img,val.title,val.metro,val.duration,val.price)
 
-					nav.dots 
-						-var dots = 4
-						ul
-							while dots--
-								li(class=dots==3 ? 'active': ' ')
-									button(type='button')
-									
-		section.third-section 
-			.container 
-				h2.title2 Полезные ссылки
-				.flex-wrap.mt-10 
-					.card__useful-links
-						p.fs-20.fw-bold Продажа квартир
-						ul.list-links.mt-10
-							each val in [{item1: '1-комнатные', item2: '2 501'},{item1: '2-комнатные', item2: '2 501'},{item1: '3-комнатные', item2: '2 501'},{item1: '4-комнатные', item2: '2 501'},{item1: 'Студии', item2: '2 501'},]
-								li.list-links__item
-									a.flex-center-between(href="#")
-										span=val.item1
-										span.c-gray=val.item2
-					.card__useful-links
-						p.fs-20.fw-bold Аренда квартир
-						ul.list-links.mt-10
-							each val in [{item1: '1-комнатные', item2: '2 501'},{item1: '2-комнатные', item2: '2 501'},{item1: '3-комнатные', item2: '2 501'},{item1: '4-комнатные', item2: '2 501'},{item1: 'Студии', item2: '2 501'},]
-								li.list-links__item
-									a.flex-center-between(href="#")
-										span=val.item1
-										span.c-gray=val.item2
-							
-					.card__useful-links(style="background-image: url(img/common/newbuilding2_1.png)")
-						p.fs-20.fw-bold Новостройки
-						ul.list-links.mt-10
-							each val in ['Сдача до конца года','Сдача до 2022', 'Сдача до 2023']
-								li.list-links__item.w-fit-content
-									a(href="#")=val
-				.flex-wrap 
-					.card__useful-links.big(style="background-image: url(img/common/newbuilding3.png)")
-						p.fs-20.fw-bold Чаще всего ищут
-						ul.list-links.mt-10
-							each val in ['Продажа жилой недвижимости','Вторичное жилье', '2-комнатные','1-комнатные', 'Дома']
-								li.list-links__item.w-fit-content
-									a(href="#")=val
-					.card__useful-links
-						p.fs-20.fw-bold Загородная недвижимость
-						ul.list-links.mt-10
-							each val in [{item1: 'Дома', item2: '2 501'},{item1: 'Таунхаусы', item2: '2 501'},{item1: 'Части дома', item2: '2 501'},{item1: 'Земельные участки', item2: '2 501'},{item1: 'Коттеджи', item2: '2 501'}]
-								li.list-links__item
-									a.flex-center-between(href="#")
-										span=val.item1
-										span.c-gray=val.item2
-									
-		section.fourth-section 
-			.box
-				.flex-center-between
-					h2.title2 Новые объявления
-					a.link(href="#") Смотреть все 
-						span.d-sm-inline.d-none объявления
-				.slider.hidden-xy 
-					.slider-container
-						.slider-arrows
-							button.arrow.arrow-prev(type="button")
-								+icon("arrow-left","c-gray")
-							button.arrow.arrow-next(type="button")
-								+icon("arrow-right","c-gray")
-						.d-flex.scroll-x 
-							- 
-								cardNewAds = [
-									{
-										img: 'newbuilding.jpg',
-										price: '1 731 660 ₽',
-										info: '2-комн. квартира',
-										info2: '40 м²',
-										location: 'Москва, поселение Сосенское',
-									},
-									{
-										img: 'newbuilding.jpg',
-										price: '1 731 660 ₽',
-										info: '2-комн. квартира',
-										info2: '40 м²',
-										location: 'Москва, поселение Сосенск...',
-									},
-									{
-										img: 'newbuilding.jpg',
-										price: '1 731 660 ₽',
-										info: '2-комн. квартира',
-										info2: '40 м²',
-										location: 'Москва, поселение Сосенск...',
-									},
-									{
-										img: 'newbuilding.jpg',
-										price: '1 731 660 ₽',
-										info: '2-комн. квартира',
-										info2: '40 м²',
-										location: 'Москва, поселение Сосенск...',
-									}
-								]
-							each val in cardNewAds
-								+cardNewAds(val.img,val.price,val.info,val.info2,val.location)
-					nav.dots 
-						-var dots = 4
-						ul
-							while dots--
-								li(class=dots==3 ? 'active': ' ')
-									button(type='button')
-		section.fifth-section 
-			.box
-				h2.title2.mb-20 Поиск на карте
-				p.fs-16.pb-30 Ищите жилье рядом с парком, <br> родственниками или за городом
-				a.btn2.w-fit-content(href="#") 
-					span.c-green ПОСМОТРЕТЬ НА КАРТЕ
-									
-		section.fourth-section 
-			.box
-				.flex-center-between
-					h2.title2 Актуальные новости
-					a.link(href="#") Смотреть все 
-						span.d-sm-inline.d-none новости
-				.slider.hidden-xy 
-					.slider-container
-						.slider-arrows
-							button.arrow.arrow-prev(type="button")
-								+icon("arrow-left","c-gray")
-							button.arrow.arrow-next(type="button")
-								+icon("arrow-right","c-gray")
-						.d-flex.scroll-x 
-							- 
-								cardNewNews = [
-									{
-										img: 'newbuilding.jpg',
-										date: '1 Май 2020',
-										eye: '800 просмотров',
-										link: 'В январе банки выдали рекордное число ипотечных кредитов',
-									},
-									{
-										img: 'newbuilding.jpg',
-										date: '1 Май 2020',
-										eye: '800 просмотров',
-										link: 'Эксперты рассказали, какие кухни продаются в новостройках Московск',
-									},
-									{
-										img: 'newbuilding.jpg',
-										date: '1 Май 2020',
-										eye: '800 просмотров',
-										link: 'Эксперты назвали жилые комплексы Новой Москвы с новыми форматами',
-									},
-									{
-										img: 'newbuilding.jpg',
-										date: '1 Май 2020',
-										eye: '800 просмотров',
-										link: 'В январе банки выдали рекордное число ипотечных кредитов',
-									},
-								]
-							each val in cardNewNews
-								+cardNewNews(val.img,val.date,val.eye,val.link)
-					nav.dots 
-						-var dots = 4
-						ul
-							while dots--
-								li(class=dots==3 ? 'active': ' ')
-									button(type='button')
 
-	.popup(data-popup="filter")
-		.popup-container 
-			.popup-head.flex-center-between
-				p.popup-title Все фильтры
-				button.btn-close(type="button")
-					+icon("close")
-			.popup-body 
-				.flex-wrap.popup-body_row 
-					.col 
-						p.text1.mb-15 Тип недвижимости
-						.select.stopPropagation
-							.select-item 
-								span Не выбрано
-								+icon("arrow-down")
-							.select-drop
-								ul.select-menu 
-									li.select-option.active Квартира
-									li.select-option Дом
 
-			.popup-footer 
+
+
+
+
+

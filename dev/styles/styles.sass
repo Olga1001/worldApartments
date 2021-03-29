@@ -34,12 +34,22 @@
   font-weight: bold
   font-size: 24px
   line-height: 26px
-  
+
+.text1
+  font-weight: bold
+  font-size: 16px
+  line-height: 140%
+  color: $black
+
 .select
   width: 100%
   background: #F5F5F5
   border-radius: 5px
   position: relative
+  &-normal 
+    background-color: transparent
+    .select-item
+      padding: 0 
   &-item
     +d-flex(space-between, center)
     padding: 17px 20px
@@ -78,25 +88,21 @@
   display: block
 
 @import "modules/modules"
- 
+
+.w-100
+  width: 100% 
+  
 .hidden-xy
   overflow: hidden
 
 .relative
   position: relative
 
-// .w-33
-//   width: 33% 
-
-// .w-50
-//   width: 50% 
-
-// .w-100
-//   width: 100%
+.h-fit 
+  height: fit-content
 
 .w-fit-content 
   width: fit-content
-
 
 .line-clamp
   display: block

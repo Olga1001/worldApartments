@@ -30,9 +30,35 @@
         color: #222222
     &-body
         overflow-y: auto 
-        padding: 0 40px
-        &::-webkit-scrollbar 
-            width: 7px
+        padding: 0 23px 30px 40px
+        max-height: 435px
+
         &_row
             display: grid 
-            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px
+            grid-template-columns: repeat(3, 1fr)
+    &-footer
+        +d-flex(flex-end, center)
+        background: $bg-white
+        box-shadow: 0px 1px 26px rgba(146, 146, 146, 0.25)
+        padding: 24px 30px
+        button 
+            max-width: none
+            width: fit-content
+            margin-left: 20px
+
+.grid-halfs 
+    display: grid 
+    grid-template-columns: 1fr 1fr
+    grid-column-gap: 16px
+
+.unit
+    position: relative 
+    &:before 
+        content: attr(data-unit)
+        +centerY 
+        right: 17px
+        font-size: 16px
+        line-height: 165%
+        color: #ACACAC
+        z-index: 2

@@ -60,3 +60,21 @@ mixin cardNewNews(img,date,eye,link)
 					span.fs-12.c-gray=eye
 			a.fw-bold.line-clamp(href="#")=link
 
+
+mixin cardAds(img,info1,info2,info3,price,area)
+	.card__ads
+		img.card__ads_img(src="img/common/"+img, alt="")
+		.card__ads_content
+			.flex-center-between 
+				p.c-white 
+					span.mr-15=info1
+					span.mr-15=info2
+					span=info3
+				
+				button.favorites.__v2(type="button")
+					+icon("heart", "c-white")
+			.flex-center-between 
+				.c-white 
+					p.fs-20.fw-bold.mb-5=price 
+					p=area
+				a.btn.lh-45(href="#") ПОКАЗАТЬ КОНТАКТЫ

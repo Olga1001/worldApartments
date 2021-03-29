@@ -1,0 +1,79 @@
+.ads-section
+    background: #F7F7F7
+    &_col 
+        padding-top: 30px 
+        padding-left: 40px
+        max-width: 530px 
+        width: 100%
+        position: relative
+        margin-left: auto
+        transition: all 0.3s ease
+        &.list  
+            max-width: 100%
+            padding-left: 0
+            #map
+                width: 0
+            .ads_scroll-y 
+                max-height: none
+                display: none
+            .list-cards__ads
+                display: block
+
+.sixth-section
+    padding: 10px 0 50px
+    background: #F7F7F7
+
+#map 
+    position: absolute 
+    right: 100% 
+    top: 0
+    width: max-content
+    height: 100%
+    transition: all 0.3s ease
+    img 
+        object-fit: cover
+
+.ads_scroll-y 
+    overflow-y: auto
+    max-height: 592px
+    margin-right: -27px
+    padding-right: 20px
+
+.slider-for
+    +box(395px,100%)
+    background: #C4C4C4
+    border-radius: 5px
+    margin-right: 10px
+    overflow: hidden
+    display: flex 
+    img 
+        object-fit: cover
+        min-height: 282px
+        +box(100%)
+
+.slider-nav
+    overflow: hidden
+    &_slide
+        margin-bottom: 10px 
+        +box(84px,calc(25% - 8px))
+        flex-shrink: 0
+        margin-bottom: 10px
+        border-radius: 3px
+        position: relative
+        img
+            +box(100%)
+            object-fit: cover
+
+.btn-more-slide
+    border-radius: 3px
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.53), rgba(0, 0, 0, 0.53))
+    position: absolute
+    left: 0 
+    top: 0
+    +box(100%)
+    color: $white
+    +d-flex(center)
+
+.list-cards__ads
+    padding-bottom: 70px
+    display: none

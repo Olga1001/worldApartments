@@ -51,6 +51,8 @@
         display: block
     .d-md-none
         display: none
+    .d-md-flex 
+        display: flex
     .btns 
         display: flex
         justify-content: flex-end
@@ -100,6 +102,8 @@
     .fifth-section .box
         background-size: auto 355px
         background-position: right -315px center
+    .popup-body_row 
+        grid-template-columns: repeat(2, 1fr)
 @media only screen and (max-width : 1019px)
     .wrapper
         padding-top: 89px
@@ -193,9 +197,29 @@
             margin-left: 0
     .footer_m-item
         margin: 0 12px 20px!important
-       
-
-            
+    
+    .popup-body_row 
+        grid-template-columns: 1fr
+    .popup-head, .popup-footer
+        padding: 30px 40px   
+    .popup-body 
+        padding: 0 33px 30px 40px
+    .popup-container
+        height: 100vh
+        border-radius: 0
+        display: flex 
+        flex-direction: column
+        justify-content: space-between
+    .popup-body
+        max-height: none
+    .popup-footer 
+        flex-direction: column-reverse
+        button 
+            width: 100% 
+            margin: 20px 0 0 0   
+            &:last-child
+                margin-top: 0
+                
 @media only screen and (max-width : 639px)
     .menumain, .header-main .container
         padding: 0 30px
@@ -223,6 +247,10 @@
         background-position: center top 160% 
     .footer-license 
         margin-top: 20px
+    .popup-head, .popup-footer
+        padding: 30px
+    .popup-body 
+        padding: 0 23px 30px 30px
 @media only screen and (max-width : 480px)
     .box
         padding: 50px 20px
@@ -294,6 +322,10 @@
             padding: 0 45px
     .footer-bottom
         padding: 20px 0 30px
+    .popup-head, .popup-footer
+        padding: 30px 47px
+    .popup-body 
+        padding: 0 40px 30px 47px
 @media only screen and (max-width : 413px)
     .container, .footer .container, .first-section .container, .header-main .container, .menumain 
         padding: 0 15px
@@ -307,6 +339,8 @@
         width: 100px
     .header .btn1
         margin-left: 20px
+    .navmain-head
+        padding: 20px 15px
     .card
         width: 300px
         margin-right: 15px
@@ -329,3 +363,18 @@
         width: 14px
     .icon-calendar
         width: 13px
+        
+    .popup-head, .popup-footer
+        padding: 20px 15px
+    .popup-body 
+        padding: 0 8px 20px 15px
+    .popup-body_row
+        grid-row-gap: 20px
+    input, textarea, .select-item
+        padding: 17px 13px
+    .unit:before, .form-price:after
+        right: 13px
+    .form-price:before
+        left: 13px
+    .form-price input
+        padding: 17px 40px
