@@ -1,0 +1,146 @@
+extends layout/main
+
+block variables
+	-var title = 'Объявление'
+
+block content
+	main.main
+		.main-ads
+			.container
+				.ads-row 
+					.ads-left 
+						.article
+							.slider3 
+								.slider-for
+									-var n = 4
+									while n--
+										img(src="img/common/img.jpg", alt="img" )
+								.slider-nav
+									-var n = 3
+									while n--
+										.slider-nav_slide.active
+											img(src="img/common/img.jpg", alt="img")
+									.slider-nav_slide
+										img(src="img/common/img.jpg", alt="img")
+							.flex-mmd-center-between
+								.mb-15 
+									.align-items-center.mb-15  
+										.align-items-center.mr-15 
+											+icon("time","c-gray mr-5 mb-3")
+											p.c-gray 11 дней назад
+										.align-items-center 
+											+icon("eye","c-gray mr-5 mb-3")
+											p.c-gray 800 просмотров
+									a.title2.article_title(href="#") Продаётся 1-комнатная квартира, 32 м²
+								.text-right.mb-15.d-mdd-block.align-items-center
+									p.title2.article_price.text-nowrap 1 780 000 ₽
+									p.mt-10.ml-15 55 625 ₽/м²
+							.align-items-center.flex-wrap.article_info-row 
+								.align-items-center.mb-15.mr-15
+									+icon("location","c-black mr-5")
+									p Иваново, Ташкентская улица, 64
+								.align-items-center.flex-wrap
+									.align-items-center.mb-15.mr-15
+										+icon("metro","c-gray mr-5")
+										p Авиамоторная
+									.align-items-center.mb-15.mr-15
+										+icon("man","c-gray mr-5")
+										p.c-gray 7 мин
+									a.link.mb-15(href="#") На карте
+							.flex-wrap.article_btns 
+								a.btn3.mr-10.lh-45(href="#") 
+									+icon("heart","c-gray")
+									span.c-gray В ИЗБРАННОЕ
+								a.btn3.mr-10.lh-45(href="#") 
+									+icon("shar","c-gray")
+									span.c-gray ПОДЕЛИТЬСЯ
+								a.btn3.mr-10.lh-45(href="#") 
+									+icon("print","c-gray")
+									span.c-gray НАПЕЧАТАТЬ
+							.article_text 
+								p.fs-20.fw-bold.mb-20 Описание
+								p.mb-20 Вашему внимаю очень хороший вариант маленькой, уютной, однокомнатной квартиры в хорошем модном районе Прибрежный , расположена на шестом этаже . Имеется перепланировка , кухня объединена с лоджией и сделан как отдельный кабинет с барной стойкой , что позволяет удобно расположится с чашечкой кофе по утру и любоваться видом из окна . И со спальни есть тоже небольшая лоджия с расположенными на ней очень вместительными шкафами . Отличный вариант для молодой семьи . Хорошо развита инфраструктура . Звоните покажем в удобное время .
+
+						
+						.card__useful-links.card__about
+							p.fs-20.fw-bold О квартире
+							ul.list-links.mt-10
+								each val in [{item1: 'Комнатность', item2: '1'},{item1: 'Общая площадь', item2: '27.5 м²'},{item1: 'Площадь кухни', item2: '9 м²'},{item1: 'Высота потолков', item2: '2.7 м'},{item1: 'Ремонт', item2: 'Современный ремонт'},{item1: 'Санузел', item2: 'Совмещенный'},{item1: 'Балкон', item2: 'Лоджия'},{item1: 'Остекление балкона', item2: 'Есть'},{item1: 'Площадь балкона', item2: '4 м²'},]
+									li.list-links__item
+										a.flex-center-between(href="#")
+											span.c-gray=val.item1
+											span=val.item2
+						.card__useful-links.card__about
+							p.fs-20.fw-bold О доме
+							ul.list-links.mt-10
+								each val in [{item1: 'Этажность', item2: '6 из 9'},{item1: 'Тип жилья', item2: 'Новостройка'},{item1: 'Застройщик', item2: 'Центр-Инвест'},{item1: 'Тип дома', item2: 'Монолитный'}, {item1: 'Парковка', item2: 'Подземная, гостевая'}]
+									li.list-links__item
+										a.flex-center-between(href="#")
+											span.c-gray=val.item1
+											span=val.item2
+								
+								
+						
+					
+					.block-user 
+						.align-items-center 
+							img.block-user_avatar(src="img/common/avatar.jpg", alt="avatar")
+							div 
+								p.fw-bold.fs-16.mb-5 Татьяна Александровна
+								a.link(href="#") 5 объявлений
+						a.btn1.lh-58(href="#")
+							span.c-green ПОКАЗАТЬ КОНТАКТЫ
+			section.fourth-section 
+				.box
+					.flex-center-between
+						h2.title2 Похожие объявления
+						a.link(href="#") Смотреть все 
+							span.d-sm-inline.d-none объявления
+					.slider.hidden-xy 
+						.slider-container
+							.slider-arrows
+								button.arrow.arrow-prev(type="button")
+									+icon("arrow-left","c-gray")
+								button.arrow.arrow-next(type="button")
+									+icon("arrow-right","c-gray")
+							.d-flex.scroll-x 
+								- 
+									cardNewAds = [
+										{
+											img: 'newbuilding.jpg',
+											price: '1 731 660 ₽',
+											info: '2-комн. квартира',
+											info2: '40 м²',
+											location: 'Москва, поселение Сосенское',
+										},
+										{
+											img: 'newbuilding.jpg',
+											price: '1 731 660 ₽',
+											info: '2-комн. квартира',
+											info2: '40 м²',
+											location: 'Москва, поселение Сосенск...',
+										},
+										{
+											img: 'newbuilding.jpg',
+											price: '1 731 660 ₽',
+											info: '2-комн. квартира',
+											info2: '40 м²',
+											location: 'Москва, поселение Сосенск...',
+										},
+										{
+											img: 'newbuilding.jpg',
+											price: '1 731 660 ₽',
+											info: '2-комн. квартира',
+											info2: '40 м²',
+											location: 'Москва, поселение Сосенск...',
+										}
+									]
+								each val in cardNewAds
+									+cardNewAds(val.img,val.price,val.info,val.info2,val.location)
+						nav.dots 
+							-var dots = 4
+							ul
+								while dots--
+									li(class=dots==3 ? 'active': ' ')
+										button(type='button')
+

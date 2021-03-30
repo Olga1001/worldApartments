@@ -61,15 +61,19 @@ mixin cardNewNews(img,date,eye,link)
 			a.fw-bold.line-clamp(href="#")=link
 
 
-mixin cardAds(img,info1,info2,info3,price,area)
+mixin cardAds(img,info1,info2,info3,place,price,area)
 	.card__ads
 		img.card__ads_img(src="img/common/"+img, alt="")
 		.card__ads_content
 			.flex-center-between 
-				p.c-white 
-					span.mr-15=info1
-					span.mr-15=info2
-					span=info3
+				div
+					p.c-white.mb-5 
+						span.mr-15=info1
+						span.mr-15=info2
+						span=info3
+					.align-items-center
+						+icon("location", "c-white mr-5")
+						p.c-white=place
 				
 				button.favorites.__v2(type="button")
 					+icon("heart", "c-white")

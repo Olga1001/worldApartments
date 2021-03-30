@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Главная страница</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header-top">
+          <div class="container">
+            <div class="flex-center-between"> 
+              <div class="align-items-center">
+                <div class="select-city"> 
+                  <div class="align-items-center"> 
+                    <svg class="svg-sprite-icon icon-location">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#location"></use>
+                    </svg>
+                    <p class="fw-bold mx-10 fs-12">Киев</p>
+                    <svg class="svg-sprite-icon icon-arrow-down">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#arrow-down"></use>
+                    </svg>
+                  </div>
+                </div>
+                <nav class="navtop"> 
+                  <ul class="menu"> 
+                    <li class="menu-item"> <a class="menu-link" href="#">Ипотека</a></li>
+                    <li class="menu-item"> <a class="menu-link" href="#">Цены</a></li>
+                    <li class="menu-item"> <a class="menu-link" href="#">Журнал</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="align-items-center"> <a class="align-items-center fw-bold fs-12 mr-10" href="#"> 
+                  <svg class="svg-sprite-icon icon-heart c-gray mx-10">
+                    <use xlink:href="img/sprite/symbol/sprite.svg#heart"></use>
+                  </svg><span class="c-gray">Избранное</span></a><a class="align-items-center fw-bold fs-12 ml-15" href="#"> 
+                  <svg class="svg-sprite-icon icon-notification c-gray mx-10">
+                    <use xlink:href="img/sprite/symbol/sprite.svg#notification"></use>
+                  </svg><span class="c-gray">Уведомления</span></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="header-main"> 
+          <div class="container"> 
+            <div class="flex-center-between"> 
+              <div class="align-items-center"><a class="logo" href="#"> </a>
+                <button class="burger"> <span class="burger-line burger-line-top"></span><span class="burger-line burger-line-center"></span><span class="burger-line burger-line-bottom"></span></button>
+                <nav class="navmain"> 
+                  <div class="d-md-none navmain-head"> 
+                    <div class="flex-center-between">
+                      <div class="align-items-center"> 
+                        <svg class="svg-sprite-icon icon-location">
+                          <use xlink:href="img/sprite/symbol/sprite.svg#location"></use>
+                        </svg>
+                        <p class="fw-bold mx-10">Киев</p>
+                      </div><a class="link" href="#">Изменить город</a>
+                    </div>
+                  </div>
+                  <ul class="menumain"> 
+                    <li class="menumain-item"> <a class="menumain-link" href="#">ПРОДАЖА</a></li>
+                    <li class="menumain-item"> <a class="menumain-link" href="#">АРЕНДА</a></li>
+                    <li class="menumain-item"> <a class="menumain-link" href="#">НОВОСТРОЙКИ</a></li>
+                  </ul>
+                  <ul class="menumain d-md-none">     
+                    <li class="menumain-item"> <a class="menumain-link" href="#">ИПОТЕКА</a></li>
+                    <li class="menumain-item"> <a class="menumain-link" href="#">ЦЕНЫ</a></li>
+                    <li class="menumain-item"> <a class="menumain-link" href="#">ЖУРНАЛ</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="align-items-center"><a class="btn1" href="#"> 
+                  <svg class="svg-sprite-icon icon-plus">
+                    <use xlink:href="img/sprite/symbol/sprite.svg#plus"></use>
+                  </svg><span class="c-green d-md-block d-none">ОБЪЯВЛЕНИЕ</span></a><a class="btn1 d-md-none" href="#"> 
+                  <svg class="svg-sprite-icon icon-heart c-gray">
+                    <use xlink:href="img/sprite/symbol/sprite.svg#heart"></use>
+                  </svg></a><a class="btn1" href="#"> 
+                  <svg class="svg-sprite-icon icon-exit">
+                    <use xlink:href="img/sprite/symbol/sprite.svg#exit"></use>
+                  </svg><span class="c-green d-md-block d-none">ВХОД</span></a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="sixth-section">
+          <div class="container">
+            <div class="search"> 
+              <div class="d-flex"> 
+                <label> 
+                  <input class="checkbox" type="radio" name="radio" checked><span class="tab">КУПИТЬ</span>
+                </label>
+                <label> 
+                  <input class="checkbox" type="radio" name="radio"><span class="tab">СНЯТЬ</span>
+                </label>
+              </div>
+              <form> 
+                <div class="flex-wrap justify-content-between"> 
+                  <div class="form-col">
+                    <div class="relative">
+                      <input type="text" placeholder="Город, адрес, метро, район  или ЖК">
+                      <button class="btn-reset" type="reset">
+                        <svg class="svg-sprite-icon icon-reset c-gray">
+                          <use xlink:href="img/sprite/symbol/sprite.svg#reset"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="form-col">
+                    <div class="select stopPropagation">
+                      <div class="select-item"> <span>Квартира</span>
+                        <svg class="svg-sprite-icon icon-arrow-down">
+                          <use xlink:href="img/sprite/symbol/sprite.svg#arrow-down"></use>
+                        </svg>
+                      </div>
+                      <div class="select-drop"> 
+                        <ul class="select-menu"> 
+                          <li class="select-option active">Квартира</li>
+                          <li class="select-option">Комната</li>
+                          <li class="select-option">Дом</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-col">
+                    <div class="select stopPropagation">
+                      <div class="select-item"> <span>1-комн.</span>
+                        <svg class="svg-sprite-icon icon-arrow-down">
+                          <use xlink:href="img/sprite/symbol/sprite.svg#arrow-down"></use>
+                        </svg>
+                      </div>
+                      <div class="select-drop">
+                        <ul class="select-menu"> 
+                          <li class="select-option active">1-комн.</li>
+                          <li class="select-option">2-комн.</li>
+                          <li class="select-option">3-комн.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-col">
+                    <div class="relative form-price">
+                      <input type="text" placeholder="65 732 269">
+                    </div>
+                  </div>
+                  <div class="btns">
+                    <button class="btn-morefilter mb-20" type="button" data-btn-popup="popup-filter">ЕЩЕ ФИЛЬТРЫ
+                      <svg class="svg-sprite-icon icon-arrow-down">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#arrow-down"></use>
+                      </svg>
+                    </button>
+                    <button class="btn mb-20 ml-md-20" type="submit">НАЙТИ</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="popup" data-popup="popup-filter">
+              <div class="popup-container stopPropagation"> 
+                <div class="popup-head flex-center-between">
+                  <p class="popup-title">Все фильтры</p>
+                  <button class="btn-close" type="button">
+                    <svg class="svg-sprite-icon icon-close">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="popup-body"> 
+                  <div class="popup-body_row"> 
+                    <div class="col"> 
+                      <p class="text1 mb-15">Тип недвижимости</p>
+                      <div class="select stopPropagation">
+                        <div class="select-item"> <span><span class="c-gray">Не выбрано</span></span>
+                          <svg class="svg-sprite-icon icon-arrow-down">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#arrow-down"></use>
+                          </svg>
+                        </div>
+                        <div class="select-drop">
+                          <ul class="select-menu"> 
+                            <li class="select-option active">Квартира</li>
+                            <li class="select-option">Дома</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <p class="text1 mb-15">Этажность Дома</p>
+                      <div class="grid-halfs">
+                        <input type="text" placeholder="От">
+                        <input type="text" placeholder="До">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <p class="text1 mb-15">Год постройки дома</p>
+                      <div class="grid-halfs">
+                        <div class="unit" data-unit="г.">
+                          <input type="text" placeholder="От">
+                        </div>
+                        <div class="unit" data-unit="г.">
+                          <input type="text" placeholder="До">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <p class="text1 mb-15">Общая площадь</p>
+                      <div class="grid-halfs">
+                        <div class="unit" data-unit="м²">
+                          <input type="text" placeholder="От">
+                        </div>
+                        <div class="unit" data-unit="м²">
+                          <input type="text" placeholder="До">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <p class="text1 mb-15">Площадь кухни</p>
+                      <div class="grid-halfs">
+                        <div class="unit" data-unit="м²">
+                          <input type="text" placeholder="От">
+                        </div>
+                        <div class="unit" data-unit="м²">
+                          <input type="text" placeholder="До">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <p class="text1 mb-15">Жилая площадь</p>
+                      <div class="grid-halfs">
+                        <div class="unit" data-unit="м²">
+                          <input type="text" placeholder="От">
+                        </div>
+                        <div class="unit" data-unit="м²">
+                          <input type="text" placeholder="До">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col"> 
+                      <p class="text1 mb-15">Материал стен</p>
+                      <div class="select stopPropagation">
+                        <div class="select-item"> <span><span class="c-gray">Любой</span></span>
+                          <svg class="svg-sprite-icon icon-arrow-down">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#arrow-down"></use>
+                          </svg>
+                        </div>
+                        <div class="select-drop">
+                          <ul class="select-menu"> 
+                            <li class="select-option active">Любой</li>
+                            <li class="select-option  ">Любой</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <p class="text1 mb-15">Этаж</p>
+                      <div class="grid-halfs">
+                        <input type="text" placeholder="От">
+                        <input type="text" placeholder="До">
+                      </div>
+                    </div>
+                    <div class="col"> 
+                      <p class="text1 mb-15">Расстояние до метро</p>
+                      <div class="select stopPropagation">
+                        <div class="select-item"> <span><span class="c-gray">Любой</span></span>
+                          <svg class="svg-sprite-icon icon-arrow-down">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#arrow-down"></use>
+                          </svg>
+                        </div>
+                        <div class="select-drop">
+                          <ul class="select-menu"> 
+                            <li class="select-option active">Любой</li>
+                            <li class="select-option  ">Любой</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col"> 
+                      <p class="text1 mb-15">Санузел</p>
+                      <div class="select stopPropagation">
+                        <div class="select-item"> <span><span class="c-gray">Любой</span></span>
+                          <svg class="svg-sprite-icon icon-arrow-down">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#arrow-down"></use>
+                          </svg>
+                        </div>
+                        <div class="select-drop">
+                          <ul class="select-menu"> 
+                            <li class="select-option active">Любой</li>
+                            <li class="select-option  ">Любой</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col"> 
+                      <p class="text1 mb-15">Высота потолка</p>
+                      <div class="select stopPropagation">
+                        <div class="select-item"> <span><span class="c-gray">Любой</span></span>
+                          <svg class="svg-sprite-icon icon-arrow-down">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#arrow-down"></use>
+                          </svg>
+                        </div>
+                        <div class="select-drop">
+                          <ul class="select-menu"> 
+                            <li class="select-option active">Любой</li>
+                            <li class="select-option  ">Любой</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col"> 
+                      <p class="text1 mb-15">Окна</p>
+                      <div class="select stopPropagation">
+                        <div class="select-item"> <span><span class="c-gray">Любой</span></span>
+                          <svg class="svg-sprite-icon icon-arrow-down">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#arrow-down"></use>
+                          </svg>
+                        </div>
+                        <div class="select-drop">
+                          <ul class="select-menu"> 
+                            <li class="select-option active">Любой</li>
+                            <li class="select-option  ">Любой</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="popup-footer"> 
+                  <button class="btn3" type="reset">ОЧИСТИТЬ ФИЛЬТР</button>
+                  <button class="btn" type="submit">ПОКАЗАТЬ 12 999 ПРЕДЛОЖЕНИЙ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="ads-section">
+          <div class="container">
+            <div class="ads-section_col list">
+              <div class="flex-center-between mb-5 flex-wrap"> 
+                <div>
+                  <h2 class="title2 mb-20">55 632 объявлений</h2>
+                  <div class="d-flex"> 
+                    <p class="fs-16 mr-5">Сортировка:</p>
+                    <div class="select select-normal stopPropagation">
+                      <div class="select-item"> <span class="c-green">Рекомендуемые</span>
+                        <svg class="svg-sprite-icon icon-arrow-down c-green">
+                          <use xlink:href="img/sprite/symbol/sprite.svg#arrow-down"></use>
+                        </svg>
+                      </div>
+                      <div class="select-drop">
+                        <ul class="select-menu"> 
+                          <li class="select-option active">Рекомендуемые</li>
+                          <li class="select-option">Популярные</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn4" id="btn-change" type="button"><span class="btn-change-list">
+                    <svg class="svg-sprite-icon icon-list c-green">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#list"></use>
+                    </svg><span class="c-green fw-bold">СПИСКОМ</span></span><span class="btn-change-onmap">
+                    <svg class="svg-sprite-icon icon-onmap c-green">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#onmap"></use>
+                    </svg><span class="c-green fw-bold">НА КАРТЕ</span></span></button>
+              </div>
+              <div id="map"><img src="img/common/map.jpg" alt="map" width="100%" height="100%"></div>
+              <div class="ads_scroll-y"> 
+                <div class="card__ads"><img class="card__ads_img" src="img/common/img.jpg" alt=""/>
+                  <div class="card__ads_content">
+                    <div class="flex-center-between"> 
+                      <div>
+                        <p class="c-white mb-5"> <span class="mr-15">2-комн.кв.</span><span class="mr-15">40 м² </span><span>5/12 этаж</span></p>
+                        <div class="align-items-center">
+                          <svg class="svg-sprite-icon icon-location c-white mr-5">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#location"></use>
+                          </svg>
+                          <p class="c-white">Москва, ул. Ясеневая 27/25</p>
+                        </div>
+                      </div>
+                      <button class="favorites __v2" type="button">
+                        <svg class="svg-sprite-icon icon-heart c-white">
+                          <use xlink:href="img/sprite/symbol/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="flex-center-between"> 
+                      <div class="c-white"> 
+                        <p class="fs-20 fw-bold mb-5">12 700 000 ₽</p>
+                        <p>237 451 ₽/м² </p>
+                      </div><a class="btn lh-45" href="#">ПОКАЗАТЬ КОНТАКТЫ</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__ads"><img class="card__ads_img" src="img/common/img.jpg" alt=""/>
+                  <div class="card__ads_content">
+                    <div class="flex-center-between"> 
+                      <div>
+                        <p class="c-white mb-5"> <span class="mr-15">2-комн.кв.</span><span class="mr-15">40 м² </span><span>5/12 этаж</span></p>
+                        <div class="align-items-center">
+                          <svg class="svg-sprite-icon icon-location c-white mr-5">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#location"></use>
+                          </svg>
+                          <p class="c-white">Москва, ул. Ясеневая 27/25</p>
+                        </div>
+                      </div>
+                      <button class="favorites __v2" type="button">
+                        <svg class="svg-sprite-icon icon-heart c-white">
+                          <use xlink:href="img/sprite/symbol/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="flex-center-between"> 
+                      <div class="c-white"> 
+                        <p class="fs-20 fw-bold mb-5">12 700 000 ₽</p>
+                        <p>237 451 ₽/м² </p>
+                      </div><a class="btn lh-45" href="#">ПОКАЗАТЬ КОНТАКТЫ</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__ads"><img class="card__ads_img" src="img/common/img.jpg" alt=""/>
+                  <div class="card__ads_content">
+                    <div class="flex-center-between"> 
+                      <div>
+                        <p class="c-white mb-5"> <span class="mr-15">2-комн.кв.</span><span class="mr-15">40 м² </span><span>5/12 этаж</span></p>
+                        <div class="align-items-center">
+                          <svg class="svg-sprite-icon icon-location c-white mr-5">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#location"></use>
+                          </svg>
+                          <p class="c-white">Москва, ул. Ясеневая 27/25</p>
+                        </div>
+                      </div>
+                      <button class="favorites __v2" type="button">
+                        <svg class="svg-sprite-icon icon-heart c-white">
+                          <use xlink:href="img/sprite/symbol/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="flex-center-between"> 
+                      <div class="c-white"> 
+                        <p class="fs-20 fw-bold mb-5">12 700 000 ₽</p>
+                        <p>237 451 ₽/м² </p>
+                      </div><a class="btn lh-45" href="#">ПОКАЗАТЬ КОНТАКТЫ</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__ads"><img class="card__ads_img" src="img/common/img.jpg" alt=""/>
+                  <div class="card__ads_content">
+                    <div class="flex-center-between"> 
+                      <div>
+                        <p class="c-white mb-5"> <span class="mr-15">2-комн.кв.</span><span class="mr-15">40 м² </span><span>5/12 этаж</span></p>
+                        <div class="align-items-center">
+                          <svg class="svg-sprite-icon icon-location c-white mr-5">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#location"></use>
+                          </svg>
+                          <p class="c-white">Москва, ул. Ясеневая 27/25</p>
+                        </div>
+                      </div>
+                      <button class="favorites __v2" type="button">
+                        <svg class="svg-sprite-icon icon-heart c-white">
+                          <use xlink:href="img/sprite/symbol/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="flex-center-between"> 
+                      <div class="c-white"> 
+                        <p class="fs-20 fw-bold mb-5">12 700 000 ₽</p>
+                        <p>237 451 ₽/м² </p>
+                      </div><a class="btn lh-45" href="#">ПОКАЗАТЬ КОНТАКТЫ</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul class="list-cards__ads">
+                <li class="card__ads-list">
+                  <div class="slider2">
+                    <div class="slider-for"><img src="img/common/img.jpg" alt="img"><img src="img/common/img.jpg" alt="img"><img src="img/common/img.jpg" alt="img"><img src="img/common/img.jpg" alt="img">
+                    </div>
+                    <div class="slider-nav">
+                      <div class="slider-nav_slide active"><img src="img/common/img.jpg" alt="img"></div>
+                      <div class="slider-nav_slide active"><img src="img/common/img.jpg" alt="img"></div>
+                      <div class="slider-nav_slide active"><img src="img/common/img.jpg" alt="img"></div>
+                      <div class="slider-nav_slide active"><img src="img/common/img.jpg" alt="img">
+                        <button class="btn-more-slide" type="button">+20</button>
+                      </div>
+                      <div class="slider-nav_slide"><img src="img/common/img.jpg" alt="img"></div>
+                    </div>
+                  </div>
+                  <div class="card__ads-list_content"> 
+                    <div class="w-100">
+                      <div class="justify-content-between"> 
+                        <div> 
+                          <p class="fs-20 fw-bold mb-5">12 700 000 ₽</p>
+                          <p class="c-gray mb-5">237 451 ₽/м² </p>
+                        </div>
+                        <div class="align-items-center h-fit"> 
+                          <svg class="svg-sprite-icon icon-time mr-5 c-gray">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#time"></use>
+                          </svg>
+                          <p class="c-gray fs-12">22 дня назад</p>
+                        </div>
+                      </div>
+                      <div class="card__ads-list_info">
+                        <p> <span class="mr-15">2-комн.кв.</span><span class="mr-15">40 м² </span><span>5/12 этаж</span></p>
+                      </div>
+                      <div class="card__ads-list_info align-items-mmd-center">
+                        <div class="align-items-center mr-15"> 
+                          <svg class="svg-sprite-icon icon-location mr-5 c-black">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#location"></use>
+                          </svg>
+                          <p>Москва, ул. Ясеневая 27/25</p>
+                        </div>
+                        <div class="align-items-center card__ads-list_info-metro">
+                          <div class="align-items-center mr-15"> 
+                            <svg class="svg-sprite-icon icon-metro mr-5 c-gray">
+                              <use xlink:href="img/sprite/symbol/sprite.svg#metro"></use>
+                            </svg>
+                            <p>Авиамоторная</p>
+                          </div>
+                          <div class="align-items-center"> 
+                            <svg class="svg-sprite-icon icon-man mr-5 c-gray">
+                              <use xlink:href="img/sprite/symbol/sprite.svg#man"></use>
+                            </svg>
+                            <p class="c-gray">7 мин</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex mt-30"><a class="btn2 lh-45 mr-10" href="#"> <span class="c-green">ПОКАЗАТЬ КОНТАКТЫ</span></a>
+                      <button class="favorites __v3" type="button">
+                        <svg class="svg-sprite-icon icon-heart c-gray">
+                          <use xlink:href="img/sprite/symbol/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="card__ads-list">
+                  <div class="slider2">
+                    <div class="slider-for"><img src="img/common/img.jpg" alt="img"><img src="img/common/img.jpg" alt="img"><img src="img/common/img.jpg" alt="img"><img src="img/common/img.jpg" alt="img">
+                    </div>
+                    <div class="slider-nav">
+                      <div class="slider-nav_slide active"><img src="img/common/img.jpg" alt="img"></div>
+                      <div class="slider-nav_slide active"><img src="img/common/img.jpg" alt="img"></div>
+                      <div class="slider-nav_slide active"><img src="img/common/img.jpg" alt="img"></div>
+                      <div class="slider-nav_slide active"><img src="img/common/img.jpg" alt="img">
+                        <button class="btn-more-slide" type="button">+20</button>
+                      </div>
+                      <div class="slider-nav_slide"><img src="img/common/img.jpg" alt="img"></div>
+                    </div>
+                  </div>
+                  <div class="card__ads-list_content"> 
+                    <div class="w-100">
+                      <div class="justify-content-between"> 
+                        <div> 
+                          <p class="fs-20 fw-bold mb-5">12 700 000 ₽</p>
+                          <p class="c-gray mb-5">237 451 ₽/м² </p>
+                        </div>
+                        <div class="align-items-center h-fit"> 
+                          <svg class="svg-sprite-icon icon-time mr-5 c-gray">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#time"></use>
+                          </svg>
+                          <p class="c-gray fs-12">22 дня назад</p>
+                        </div>
+                      </div>
+                      <div class="card__ads-list_info">
+                        <p> <span class="mr-15">2-комн.кв.</span><span class="mr-15">40 м² </span><span>5/12 этаж</span></p>
+                      </div>
+                      <div class="card__ads-list_info align-items-mmd-center">
+                        <div class="align-items-center mr-15"> 
+                          <svg class="svg-sprite-icon icon-location mr-5 c-black">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#location"></use>
+                          </svg>
+                          <p>Москва, ул. Ясеневая 27/25</p>
+                        </div>
+                        <div class="align-items-center card__ads-list_info-metro">
+                          <div class="align-items-center mr-15"> 
+                            <svg class="svg-sprite-icon icon-metro mr-5 c-gray">
+                              <use xlink:href="img/sprite/symbol/sprite.svg#metro"></use>
+                            </svg>
+                            <p>Авиамоторная</p>
+                          </div>
+                          <div class="align-items-center"> 
+                            <svg class="svg-sprite-icon icon-man mr-5 c-gray">
+                              <use xlink:href="img/sprite/symbol/sprite.svg#man"></use>
+                            </svg>
+                            <p class="c-gray">7 мин</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex mt-30"><a class="btn2 lh-45 mr-10" href="#"> <span class="c-green">ПОКАЗАТЬ КОНТАКТЫ</span></a>
+                      <button class="favorites __v3" type="button">
+                        <svg class="svg-sprite-icon icon-heart c-gray">
+                          <use xlink:href="img/sprite/symbol/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="card__ads-list">
+                  <div class="slider2">
+                    <div class="slider-for"><img src="img/common/img.jpg" alt="img"><img src="img/common/img.jpg" alt="img"><img src="img/common/img.jpg" alt="img"><img src="img/common/img.jpg" alt="img">
+                    </div>
+                    <div class="slider-nav">
+                      <div class="slider-nav_slide active"><img src="img/common/img.jpg" alt="img"></div>
+                      <div class="slider-nav_slide active"><img src="img/common/img.jpg" alt="img"></div>
+                      <div class="slider-nav_slide active"><img src="img/common/img.jpg" alt="img"></div>
+                      <div class="slider-nav_slide active"><img src="img/common/img.jpg" alt="img">
+                        <button class="btn-more-slide" type="button">+20</button>
+                      </div>
+                      <div class="slider-nav_slide"><img src="img/common/img.jpg" alt="img"></div>
+                    </div>
+                  </div>
+                  <div class="card__ads-list_content"> 
+                    <div class="w-100">
+                      <div class="justify-content-between"> 
+                        <div> 
+                          <p class="fs-20 fw-bold mb-5">12 700 000 ₽</p>
+                          <p class="c-gray mb-5">237 451 ₽/м² </p>
+                        </div>
+                        <div class="align-items-center h-fit"> 
+                          <svg class="svg-sprite-icon icon-time mr-5 c-gray">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#time"></use>
+                          </svg>
+                          <p class="c-gray fs-12">22 дня назад</p>
+                        </div>
+                      </div>
+                      <div class="card__ads-list_info">
+                        <p> <span class="mr-15">2-комн.кв.</span><span class="mr-15">40 м² </span><span>5/12 этаж</span></p>
+                      </div>
+                      <div class="card__ads-list_info align-items-mmd-center">
+                        <div class="align-items-center mr-15"> 
+                          <svg class="svg-sprite-icon icon-location mr-5 c-black">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#location"></use>
+                          </svg>
+                          <p>Москва, ул. Ясеневая 27/25</p>
+                        </div>
+                        <div class="align-items-center card__ads-list_info-metro">
+                          <div class="align-items-center mr-15"> 
+                            <svg class="svg-sprite-icon icon-metro mr-5 c-gray">
+                              <use xlink:href="img/sprite/symbol/sprite.svg#metro"></use>
+                            </svg>
+                            <p>Авиамоторная</p>
+                          </div>
+                          <div class="align-items-center"> 
+                            <svg class="svg-sprite-icon icon-man mr-5 c-gray">
+                              <use xlink:href="img/sprite/symbol/sprite.svg#man"></use>
+                            </svg>
+                            <p class="c-gray">7 мин</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex mt-30"><a class="btn2 lh-45 mr-10" href="#"> <span class="c-green">ПОКАЗАТЬ КОНТАКТЫ</span></a>
+                      <button class="favorites __v3" type="button">
+                        <svg class="svg-sprite-icon icon-heart c-gray">
+                          <use xlink:href="img/sprite/symbol/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="card__ads-list">
+                  <div class="slider2">
+                    <div class="slider-for"><img src="img/common/img.jpg" alt="img"><img src="img/common/img.jpg" alt="img"><img src="img/common/img.jpg" alt="img"><img src="img/common/img.jpg" alt="img">
+                    </div>
+                    <div class="slider-nav">
+                      <div class="slider-nav_slide active"><img src="img/common/img.jpg" alt="img"></div>
+                      <div class="slider-nav_slide active"><img src="img/common/img.jpg" alt="img"></div>
+                      <div class="slider-nav_slide active"><img src="img/common/img.jpg" alt="img"></div>
+                      <div class="slider-nav_slide active"><img src="img/common/img.jpg" alt="img">
+                        <button class="btn-more-slide" type="button">+20</button>
+                      </div>
+                      <div class="slider-nav_slide"><img src="img/common/img.jpg" alt="img"></div>
+                    </div>
+                  </div>
+                  <div class="card__ads-list_content"> 
+                    <div class="w-100">
+                      <div class="justify-content-between"> 
+                        <div> 
+                          <p class="fs-20 fw-bold mb-5">12 700 000 ₽</p>
+                          <p class="c-gray mb-5">237 451 ₽/м² </p>
+                        </div>
+                        <div class="align-items-center h-fit"> 
+                          <svg class="svg-sprite-icon icon-time mr-5 c-gray">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#time"></use>
+                          </svg>
+                          <p class="c-gray fs-12">22 дня назад</p>
+                        </div>
+                      </div>
+                      <div class="card__ads-list_info">
+                        <p> <span class="mr-15">2-комн.кв.</span><span class="mr-15">40 м² </span><span>5/12 этаж</span></p>
+                      </div>
+                      <div class="card__ads-list_info align-items-mmd-center">
+                        <div class="align-items-center mr-15"> 
+                          <svg class="svg-sprite-icon icon-location mr-5 c-black">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#location"></use>
+                          </svg>
+                          <p>Москва, ул. Ясеневая 27/25</p>
+                        </div>
+                        <div class="align-items-center card__ads-list_info-metro">
+                          <div class="align-items-center mr-15"> 
+                            <svg class="svg-sprite-icon icon-metro mr-5 c-gray">
+                              <use xlink:href="img/sprite/symbol/sprite.svg#metro"></use>
+                            </svg>
+                            <p>Авиамоторная</p>
+                          </div>
+                          <div class="align-items-center"> 
+                            <svg class="svg-sprite-icon icon-man mr-5 c-gray">
+                              <use xlink:href="img/sprite/symbol/sprite.svg#man"></use>
+                            </svg>
+                            <p class="c-gray">7 мин</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex mt-30"><a class="btn2 lh-45 mr-10" href="#"> <span class="c-green">ПОКАЗАТЬ КОНТАКТЫ</span></a>
+                      <button class="favorites __v3" type="button">
+                        <svg class="svg-sprite-icon icon-heart c-gray">
+                          <use xlink:href="img/sprite/symbol/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container"> 
+          <div class="flex-center-between"> 
+            <h2 class="title2">Недвижимость <span class="text-nowrap">по всей </span>России</h2><a class="link" href="#">Смотреть <span class="d-sm-inline d-none">полный список</span><span class="d-sm-none">все</span></a>
+          </div>
+          <div class="footer-row d-flex">
+            <ul class="footer-col"> 
+              <li> <a href="#">Новокузнецк</a></li>
+              <li> <a href="#">Тверь</a></li>
+              <li> <a href="#">Новороссийск</a></li>
+              <li> <a href="#">Казань</a></li>
+              <li> <a href="#">Саратов</a></li>
+            </ul>
+            <ul class="footer-col"> 
+              <li> <a href="#">Прокопьевск</a></li>
+              <li> <a href="#">Санкт-Петербург</a></li>
+              <li> <a href="#">Сургут</a></li>
+              <li> <a href="#">Брянск</a></li>
+              <li> <a href="#">Смоленск</a></li>
+            </ul>
+            <ul class="footer-col"> 
+              <li> <a href="#">Великий Новгород</a></li>
+              <li> <a href="#">Калуга</a></li>
+              <li> <a href="#">Нижний Новгород</a></li>
+              <li> <a href="#">Тамбов</a></li>
+              <li> <a href="#">Владимир</a></li>
+            </ul>
+            <ul class="footer-col"> 
+              <li> <a href="#">Курск</a></li>
+              <li> <a href="#">Вологда</a></li>
+              <li> <a href="#">Кострома</a></li>
+              <li> <a href="#">Тверь</a></li>
+              <li> <a href="#">Орел</a></li>
+            </ul>
+            <ul class="footer-col"> 
+              <li> <a href="#">Саранск</a></li>
+              <li> <a href="#">Липецк</a></li>
+              <li> <a href="#">Воронеж</a></li>
+              <li> <a href="#">Тула</a></li>
+              <li> <a href="#">Рязань</a></li>
+            </ul>
+          </div>
+          <div class="footer-bottom">
+            <div class="footer-bottom_t_row">
+              <ul class="flex-wrap justify-content-center footer_m">
+                <li class="mb-20 footer_m-item"><a class="fw-bold c-gray" href="#">ПРОДАЖА</a></li>
+                <li class="mb-20 footer_m-item"><a class="fw-bold c-gray" href="#">АРЕНДА</a></li>
+                <li class="mb-20 footer_m-item"><a class="fw-bold c-gray" href="#">НОВОСТРОЙКИ</a></li>
+                <li class="mb-20 footer_m-item"><a class="fw-bold c-gray" href="#">ИПОТЕКА</a></li>
+                <li class="mb-20 footer_m-item"><a class="fw-bold c-gray" href="#">ЦЕНЫ</a></li>
+                <li class="mb-20 footer_m-item"><a class="fw-bold c-gray" href="#">ЖУРНАЛ</a></li>
+              </ul>
+              <div class="justify-content-mmd-between justify-content-center">
+                <ul class="socials flex-wrap">
+                  <li class="mb-20"> <a href="#"> 
+                      <svg class="svg-sprite-icon icon-viber social c-gray">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#viber"></use>
+                      </svg></a></li>
+                  <li class="mb-20"> <a href="#"> 
+                      <svg class="svg-sprite-icon icon-youtube social c-gray">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#youtube"></use>
+                      </svg></a></li>
+                  <li class="mb-20"> <a href="#"> 
+                      <svg class="svg-sprite-icon icon-twitter social c-gray">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#twitter"></use>
+                      </svg></a></li>
+                  <li class="mb-20"> <a href="#"> 
+                      <svg class="svg-sprite-icon icon-telegram social c-gray">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#telegram"></use>
+                      </svg></a></li>
+                  <li class="mb-20"> <a href="#"> 
+                      <svg class="svg-sprite-icon icon-instagram social c-gray">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#instagram"></use>
+                      </svg></a></li>
+                  <li class="mb-20"> <a href="#"> 
+                      <svg class="svg-sprite-icon icon-facebook social c-gray">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#facebook"></use>
+                      </svg></a></li>
+                </ul><a class="d-lg-none d-mmd-block d-none link2 ml-30" href="#">Конфиденциальность</a>
+              </div>
+            </div>
+            <div class="flex-center-between flex-wrap flex-mmd-row flex-column-reverse"> 
+              <p class="c-gray footer-license">© ООО «Мир квартир», 2008 — 2021</p>
+              <div class="align-items-sm-center text-center"><a class="link2 mb-15" href="#">Условия использования</a><a class="d-lg-block d-mmd-none link2 ml-sm-30" href="#">Конфиденциальность</a></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

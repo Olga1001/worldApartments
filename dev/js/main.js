@@ -38,4 +38,9 @@ $(document).ready(function () {
   $(".btn-close, .popup").click(function () {
     $(".popup").removeClass('active');
   });
+
+  //change list or map
+  $("#btn-change").click(function () {
+    $(".ads-section_col").toggleClass('list');
+  });
 });
