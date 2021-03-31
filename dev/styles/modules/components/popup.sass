@@ -11,6 +11,7 @@
     opacity: 0
     pointer-events: none 
     transition: all 0.3s ease
+    -webkit-overflow-scrolling: touch
     &.active 
         opacity: 1
         pointer-events: auto
@@ -29,10 +30,9 @@
         line-height: 26px
         color: #222222
     &-body
-        overflow-y: auto 
+        overflow-y: scroll
         padding: 0 23px 30px 40px
         max-height: 435px
-
         &_row
             display: grid 
             grid-gap: 30px

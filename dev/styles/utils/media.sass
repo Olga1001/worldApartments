@@ -279,7 +279,6 @@
         max-height: none
     .popup-footer 
         flex-direction: column-reverse
-        padding-bottom: 120px
         button 
             width: 100% 
             margin: 20px 0 0 0   
@@ -304,6 +303,23 @@
         width: 340px
     .slider-for img
         height: 250px
+    .popup
+        position: static
+        overflow-y: initial
+    .popup-container
+        height: auto
+    .popup-head
+        position: sticky
+        top: 0
+        background-color: $bg-white 
+        z-index: 9
+    .popup-body
+        overflow-y: initial
+    .popup-footer
+        position: sticky
+        bottom: 0
+        z-index: 9
+
 @media only screen and (max-width : 767px)
     .ads_scroll-y 
         max-height: none
@@ -367,8 +383,6 @@
         margin-bottom: 20px
     .popup-head, .popup-footer
         padding: 30px
-    .popup-footer
-        padding-bottom: 120px
     .popup-body 
         padding: 0 23px 30px 30px
     .card__ads-list_info-metro
@@ -399,7 +413,7 @@
         .btn4 
             margin-top: 20px
     .modal-b.active #map
-        height: calc(100vh - 223px - 25px - 43.75vw - 20px - 100px)
+        height: calc(100vh - 223px - 25px - 43.75vw - 20px)
 
 @media only screen and (max-width : 480px)
     .box
@@ -423,7 +437,7 @@
         height: 58.33vw
     
     .modal-b.active #map
-        height: calc(100vh - 223px - 25px - 58.33vw - 20px - 100px)
+        height: calc(100vh - 223px - 25px - 58.33vw - 20px)
 @media only screen and (max-width : 479px)
     .logo 
         background-image: url("../img/logo/logomob.png")
@@ -486,10 +500,9 @@
         padding: 20px 0 30px
     .popup-head, .popup-footer
         padding: 30px 47px
-    .popup-footer
-        padding-bottom: 120px
     .popup-body 
         padding: 0 40px 30px 47px
+    
     .card__ads_b 
         display: block
         .btn
@@ -540,11 +553,8 @@
         width: 14px
     .icon-calendar
         width: 13px
-        
     .popup-head, .popup-footer
         padding: 20px 15px
-    .popup-footer
-        padding-bottom: 120px
     .popup-body 
         padding: 0 8px 20px 15px
     .popup-body_row
@@ -583,5 +593,5 @@
     .modal-b.active .modal-b_head
         padding: 25px 15px 0
     .modal-b.active #map
-        height: calc(100vh - 173px - 25px - 67.6vw - 20px - 100px)
+        height: calc(100vh - 173px - 25px - 67.6vw - 20px)
 

@@ -43,12 +43,15 @@ $(document).ready(function () {
   $("[data-btn-popup]").click(function () {
     var data = $(this).data("btn-popup");
     $('[data-popup="' + data + '"]').addClass('active');
-    bodyFreezeScroll();
+
+    if (window.matchMedia("(max-width: 991px)").matches) {
+      $(".wrapper").hide();
+    }
   }); // popups hide
 
   $(".btn-close, .popup").click(function () {
     $(".popup").removeClass('active');
-    bodyUnfreezeScroll();
+    $(".wrapper").show();
   }); //change list or map
 
   $("#btn-change").click(function () {
@@ -57,11 +60,9 @@ $(document).ready(function () {
     if (window.matchMedia("(max-width: 767px)").matches) {
       $(".modal-b").toggleClass('active');
 
-      if ($(".modal-b").hasClass('active')) {
-        bodyFreezeScroll();
-      } else {
-        bodyUnfreezeScroll();
-      }
+      if ($(".modal-b").hasClass('active')) {// bodyFreezeScroll();
+      } else {// bodyUnfreezeScroll();
+        }
     }
   });
 });
