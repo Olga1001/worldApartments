@@ -68,8 +68,16 @@ $(document).ready(function () {
         // bodyUnfreezeScroll();
       }
     } 
-   
   });
 
+  // page reload when width resize
+  var before = $(this).width();
+
+  $(window).resize(function() {
+    var after = $(this).width();
+    if (after != before) {
+      location.reload()
+    }
+  })
 
 });
