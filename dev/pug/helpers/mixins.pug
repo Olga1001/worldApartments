@@ -78,7 +78,7 @@ mixin cardAds(img,info1,info2,info3,place,price,area)
 				button.favorites.__v2(type="button")
 					+icon("heart", "c-white")
 			.flex-center-between.card__ads_b
-				.c-white.card__ads_b-price 
-					p.fs-20.fw-bold.mb-5.mr-10=price 
-					p=area
+				.card__ads_b-price 
+					p.c-white.fs-20.fw-bold.mb-5.mr-10=price 
+					p.c-white=area
 				a.btn.lh-45(href="#") ПОКАЗАТЬ КОНТАКТЫ

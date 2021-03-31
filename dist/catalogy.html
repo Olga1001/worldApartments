@@ -337,137 +337,139 @@
         <section class="ads-section">
           <div class="container">
             <div class="ads-section_col list">
-              <div class="flex-center-between mb-5 flex-wrap"> 
-                <div>
-                  <h2 class="title2 mb-20">55 632 объявлений</h2>
-                  <div class="d-flex"> 
-                    <p class="fs-16 mr-5">Сортировка:</p>
-                    <div class="select select-normal stopPropagation">
-                      <div class="select-item"> <span class="c-green">Рекомендуемые</span>
-                        <svg class="svg-sprite-icon icon-arrow-down c-green">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#arrow-down"></use>
-                        </svg>
-                      </div>
-                      <div class="select-drop">
-                        <ul class="select-menu"> 
-                          <li class="select-option active">Рекомендуемые</li>
-                          <li class="select-option">Популярные</li>
-                        </ul>
+              <div class="modal-b w-100">
+                <div class="flex-center-between mb-5 flex-wrap modal-b_head"> 
+                  <div>
+                    <h2 class="title2 mb-20">55 632 объявлений</h2>
+                    <div class="d-flex"> 
+                      <p class="fs-16 mr-5">Сортировка:</p>
+                      <div class="select select-normal stopPropagation">
+                        <div class="select-item"> <span class="c-green">Рекомендуемые</span>
+                          <svg class="svg-sprite-icon icon-arrow-down c-green">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#arrow-down"></use>
+                          </svg>
+                        </div>
+                        <div class="select-drop">
+                          <ul class="select-menu"> 
+                            <li class="select-option active">Рекомендуемые</li>
+                            <li class="select-option">Популярные</li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <button class="btn4" id="btn-change" type="button"><span class="btn-change-list">
+                      <svg class="svg-sprite-icon icon-list c-green">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#list"></use>
+                      </svg><span class="c-green fw-bold">СПИСКОМ</span></span><span class="btn-change-onmap">
+                      <svg class="svg-sprite-icon icon-onmap c-green">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#onmap"></use>
+                      </svg><span class="c-green fw-bold">НА КАРТЕ</span></span></button>
                 </div>
-                <button class="btn4" id="btn-change" type="button"><span class="btn-change-list">
-                    <svg class="svg-sprite-icon icon-list c-green">
-                      <use xlink:href="img/sprite/symbol/sprite.svg#list"></use>
-                    </svg><span class="c-green fw-bold">СПИСКОМ</span></span><span class="btn-change-onmap">
-                    <svg class="svg-sprite-icon icon-onmap c-green">
-                      <use xlink:href="img/sprite/symbol/sprite.svg#onmap"></use>
-                    </svg><span class="c-green fw-bold">НА КАРТЕ</span></span></button>
-              </div>
-              <div id="map"><img src="img/common/map.jpg" alt="map" width="100%" height="100%"></div>
-              <div class="ads_scroll-y"> 
-                <div class="card__ads"><img class="card__ads_img" src="img/common/img.jpg" alt=""/>
-                  <div class="card__ads_content">
-                    <div class="flex-center-between"> 
-                      <div>
-                        <p class="c-white mb-5"> <span class="mr-15">2-комн.кв.</span><span class="mr-15">40 м² </span><span>5/12 этаж</span></p>
-                        <div class="align-items-center">
-                          <svg class="svg-sprite-icon icon-location c-white mr-5">
-                            <use xlink:href="img/sprite/symbol/sprite.svg#location"></use>
-                          </svg>
-                          <p class="c-white">Москва, ул. Ясеневая 27/25</p>
+                <div id="map"><img src="img/common/map.jpg" alt="map" width="100%" height="100%"></div>
+                <div class="ads_scroll-y"> 
+                  <div class="card__ads"><img class="card__ads_img" src="img/common/img.jpg" alt=""/>
+                    <div class="card__ads_content">
+                      <div class="flex-center-between"> 
+                        <div>
+                          <p class="c-white mb-5"> <span class="mr-15">2-комн.кв.</span><span class="mr-15">40 м² </span><span>5/12 этаж</span></p>
+                          <div class="align-items-center">
+                            <svg class="svg-sprite-icon icon-location c-white mr-5">
+                              <use xlink:href="img/sprite/symbol/sprite.svg#location"></use>
+                            </svg>
+                            <p class="c-white">Москва, ул. Ясеневая 27/25</p>
+                          </div>
                         </div>
+                        <button class="favorites __v2" type="button">
+                          <svg class="svg-sprite-icon icon-heart c-white">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#heart"></use>
+                          </svg>
+                        </button>
                       </div>
-                      <button class="favorites __v2" type="button">
-                        <svg class="svg-sprite-icon icon-heart c-white">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#heart"></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="flex-center-between card__ads_b">
-                      <div class="c-white card__ads_b-price"> 
-                        <p class="fs-20 fw-bold mb-5 mr-10">12 700 000 ₽</p>
-                        <p>237 451 ₽/м² </p>
-                      </div><a class="btn lh-45" href="#">ПОКАЗАТЬ КОНТАКТЫ</a>
+                      <div class="flex-center-between card__ads_b">
+                        <div class="card__ads_b-price"> 
+                          <p class="c-white fs-20 fw-bold mb-5 mr-10">12 700 000 ₽</p>
+                          <p class="c-white">237 451 ₽/м² </p>
+                        </div><a class="btn lh-45" href="#">ПОКАЗАТЬ КОНТАКТЫ</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="card__ads"><img class="card__ads_img" src="img/common/img.jpg" alt=""/>
-                  <div class="card__ads_content">
-                    <div class="flex-center-between"> 
-                      <div>
-                        <p class="c-white mb-5"> <span class="mr-15">2-комн.кв.</span><span class="mr-15">40 м² </span><span>5/12 этаж</span></p>
-                        <div class="align-items-center">
-                          <svg class="svg-sprite-icon icon-location c-white mr-5">
-                            <use xlink:href="img/sprite/symbol/sprite.svg#location"></use>
-                          </svg>
-                          <p class="c-white">Москва, ул. Ясеневая 27/25</p>
+                  <div class="card__ads"><img class="card__ads_img" src="img/common/img.jpg" alt=""/>
+                    <div class="card__ads_content">
+                      <div class="flex-center-between"> 
+                        <div>
+                          <p class="c-white mb-5"> <span class="mr-15">2-комн.кв.</span><span class="mr-15">40 м² </span><span>5/12 этаж</span></p>
+                          <div class="align-items-center">
+                            <svg class="svg-sprite-icon icon-location c-white mr-5">
+                              <use xlink:href="img/sprite/symbol/sprite.svg#location"></use>
+                            </svg>
+                            <p class="c-white">Москва, ул. Ясеневая 27/25</p>
+                          </div>
                         </div>
+                        <button class="favorites __v2" type="button">
+                          <svg class="svg-sprite-icon icon-heart c-white">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#heart"></use>
+                          </svg>
+                        </button>
                       </div>
-                      <button class="favorites __v2" type="button">
-                        <svg class="svg-sprite-icon icon-heart c-white">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#heart"></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="flex-center-between card__ads_b">
-                      <div class="c-white card__ads_b-price"> 
-                        <p class="fs-20 fw-bold mb-5 mr-10">12 700 000 ₽</p>
-                        <p>237 451 ₽/м² </p>
-                      </div><a class="btn lh-45" href="#">ПОКАЗАТЬ КОНТАКТЫ</a>
+                      <div class="flex-center-between card__ads_b">
+                        <div class="card__ads_b-price"> 
+                          <p class="c-white fs-20 fw-bold mb-5 mr-10">12 700 000 ₽</p>
+                          <p class="c-white">237 451 ₽/м² </p>
+                        </div><a class="btn lh-45" href="#">ПОКАЗАТЬ КОНТАКТЫ</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="card__ads"><img class="card__ads_img" src="img/common/img.jpg" alt=""/>
-                  <div class="card__ads_content">
-                    <div class="flex-center-between"> 
-                      <div>
-                        <p class="c-white mb-5"> <span class="mr-15">2-комн.кв.</span><span class="mr-15">40 м² </span><span>5/12 этаж</span></p>
-                        <div class="align-items-center">
-                          <svg class="svg-sprite-icon icon-location c-white mr-5">
-                            <use xlink:href="img/sprite/symbol/sprite.svg#location"></use>
-                          </svg>
-                          <p class="c-white">Москва, ул. Ясеневая 27/25</p>
+                  <div class="card__ads"><img class="card__ads_img" src="img/common/img.jpg" alt=""/>
+                    <div class="card__ads_content">
+                      <div class="flex-center-between"> 
+                        <div>
+                          <p class="c-white mb-5"> <span class="mr-15">2-комн.кв.</span><span class="mr-15">40 м² </span><span>5/12 этаж</span></p>
+                          <div class="align-items-center">
+                            <svg class="svg-sprite-icon icon-location c-white mr-5">
+                              <use xlink:href="img/sprite/symbol/sprite.svg#location"></use>
+                            </svg>
+                            <p class="c-white">Москва, ул. Ясеневая 27/25</p>
+                          </div>
                         </div>
+                        <button class="favorites __v2" type="button">
+                          <svg class="svg-sprite-icon icon-heart c-white">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#heart"></use>
+                          </svg>
+                        </button>
                       </div>
-                      <button class="favorites __v2" type="button">
-                        <svg class="svg-sprite-icon icon-heart c-white">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#heart"></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="flex-center-between card__ads_b">
-                      <div class="c-white card__ads_b-price"> 
-                        <p class="fs-20 fw-bold mb-5 mr-10">12 700 000 ₽</p>
-                        <p>237 451 ₽/м² </p>
-                      </div><a class="btn lh-45" href="#">ПОКАЗАТЬ КОНТАКТЫ</a>
+                      <div class="flex-center-between card__ads_b">
+                        <div class="card__ads_b-price"> 
+                          <p class="c-white fs-20 fw-bold mb-5 mr-10">12 700 000 ₽</p>
+                          <p class="c-white">237 451 ₽/м² </p>
+                        </div><a class="btn lh-45" href="#">ПОКАЗАТЬ КОНТАКТЫ</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="card__ads"><img class="card__ads_img" src="img/common/img.jpg" alt=""/>
-                  <div class="card__ads_content">
-                    <div class="flex-center-between"> 
-                      <div>
-                        <p class="c-white mb-5"> <span class="mr-15">2-комн.кв.</span><span class="mr-15">40 м² </span><span>5/12 этаж</span></p>
-                        <div class="align-items-center">
-                          <svg class="svg-sprite-icon icon-location c-white mr-5">
-                            <use xlink:href="img/sprite/symbol/sprite.svg#location"></use>
-                          </svg>
-                          <p class="c-white">Москва, ул. Ясеневая 27/25</p>
+                  <div class="card__ads"><img class="card__ads_img" src="img/common/img.jpg" alt=""/>
+                    <div class="card__ads_content">
+                      <div class="flex-center-between"> 
+                        <div>
+                          <p class="c-white mb-5"> <span class="mr-15">2-комн.кв.</span><span class="mr-15">40 м² </span><span>5/12 этаж</span></p>
+                          <div class="align-items-center">
+                            <svg class="svg-sprite-icon icon-location c-white mr-5">
+                              <use xlink:href="img/sprite/symbol/sprite.svg#location"></use>
+                            </svg>
+                            <p class="c-white">Москва, ул. Ясеневая 27/25</p>
+                          </div>
                         </div>
+                        <button class="favorites __v2" type="button">
+                          <svg class="svg-sprite-icon icon-heart c-white">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#heart"></use>
+                          </svg>
+                        </button>
                       </div>
-                      <button class="favorites __v2" type="button">
-                        <svg class="svg-sprite-icon icon-heart c-white">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#heart"></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="flex-center-between card__ads_b">
-                      <div class="c-white card__ads_b-price"> 
-                        <p class="fs-20 fw-bold mb-5 mr-10">12 700 000 ₽</p>
-                        <p>237 451 ₽/м² </p>
-                      </div><a class="btn lh-45" href="#">ПОКАЗАТЬ КОНТАКТЫ</a>
+                      <div class="flex-center-between card__ads_b">
+                        <div class="card__ads_b-price"> 
+                          <p class="c-white fs-20 fw-bold mb-5 mr-10">12 700 000 ₽</p>
+                          <p class="c-white">237 451 ₽/м² </p>
+                        </div><a class="btn lh-45" href="#">ПОКАЗАТЬ КОНТАКТЫ</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -812,8 +814,8 @@
               </div>
             </div>
             <div class="flex-center-between flex-wrap flex-mmd-row flex-column-reverse"> 
-              <p class="c-gray footer-license">© ООО «Мир квартир», 2008 — 2021</p>
-              <div class="align-items-sm-center text-center"><a class="link2 mb-15" href="#">Условия использования</a><a class="d-lg-block d-mmd-none link2 ml-sm-30" href="#">Конфиденциальность</a></div>
+              <p class="c-gray">© ООО «Мир квартир», 2008 — 2021</p>
+              <div class="align-items-sm-center text-center"><a class="link2" href="#">Условия использования</a><a class="d-lg-block d-mmd-none link2 ml-sm-30" href="#">Конфиденциальность</a></div>
             </div>
           </div>
         </div>

@@ -30,7 +30,6 @@
     top: 0
     width: max-content
     height: 100%
-    transition: all 0.3s ease
     img 
         object-fit: cover
 
@@ -84,3 +83,22 @@
 
 .slider2
     display: flex
+
+.modal-b 
+    width: 100%
+    &.active 
+        position: fixed 
+        top: 0 
+        left: 0 
+        height: 100vh 
+        z-index: 99
+        background: #F7F7F7
+        overflow-y: auto
+        padding-bottom: 100px
+        .modal-b_head 
+            padding: 50px 40px 25px
+        #map
+            height: calc(100vh - 147px - 25px - 43.75vw - 20px - 100px)
+
+
+

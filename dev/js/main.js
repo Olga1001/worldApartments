@@ -1,4 +1,16 @@
 $(document).ready(function () {
+  var $body = $(window.document.body);
+
+  function bodyFreezeScroll() {
+    $body.css('overflow', 'hidden');
+    $body.css('position', 'fixed');
+  }
+
+  function bodyUnfreezeScroll() {
+    $body.css('overflow', 'auto');
+    $body.css('position', 'relative');
+  }
+
   // burder
   $(".burger").click(function () {
     $(this).toggleClass('active');
@@ -32,15 +44,29 @@ $(document).ready(function () {
   $("[data-btn-popup]").click(function () {
     let data = $(this).data("btn-popup");
     $('[data-popup="'+ data +'"]').addClass('active');
+    bodyFreezeScroll();
   });
 
   // popups hide
   $(".btn-close, .popup").click(function () {
     $(".popup").removeClass('active');
+    bodyUnfreezeScroll();
   });
 
   //change list or map
   $("#btn-change").click(function () {
     $(".ads-section_col").toggleClass('list');
+    if (window.matchMedia("(max-width: 767px)").matches){
+      $(".modal-b").toggleClass('active');
+      
+      if ($(".modal-b").hasClass('active')) {
+        bodyFreezeScroll();
+      } else {
+        bodyUnfreezeScroll();
+      }
+    } 
+   
   });
+
+
 });
