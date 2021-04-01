@@ -331,7 +331,7 @@
             &:first-child 
                 display: block
     .card__ads_img
-        height: 43.75vw
+        height: 280px
     #map 
         position: static
         width: 100%
@@ -352,6 +352,11 @@
         width: 100%
         padding: 10px 0 20px
         margin: 0 auto
+    .ads_scroll-y
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
 @media only screen and (max-width : 639px)
     #map
         margin-top: 20px
@@ -407,13 +412,13 @@
         svg 
             margin: 0 
     
+    #btn-change
+        padding: 0 20px
 @media only screen and (max-width : 560px)
-    .modal-b.active .modal-b_head 
-        display: block
-        .btn4 
-            margin-top: 20px
     .modal-b.active #map
-        height: calc(100vh - 223px - 25px - 43.75vw - 20px)
+        height: calc(100vh - 97px - 25px)
+    .card__ads_img
+        height: 215px
 
 @media only screen and (max-width : 480px)
     .box
@@ -433,11 +438,11 @@
             height: 80.9vw
     .article
         padding: 0 20px 30px
-    .card__ads_img
-        height: 58.33vw
     
     .modal-b.active #map
-        height: calc(100vh - 223px - 25px - 58.33vw - 20px)
+        height: calc(100vh - 87px - 25px)
+    .modal-b .mb-20
+        margin-bottom: 10px
 @media only screen and (max-width : 479px)
     .logo 
         background-image: url("../img/logo/logomob.png")
@@ -509,13 +514,17 @@
             max-width: 100%
     .card__ads_b-price 
         display: flex 
-        margin-bottom: 20px
+        margin-bottom: 10px
         p 
             margin-bottom: 0
-    .modal-b_head 
-        display: block
-        .btn4 
-            margin-top: 20px
+    #btn-change
+        span.fw-bold 
+            display: none 
+        svg 
+            margin-right: 0
+    .card__ads_content
+        padding: 10px
+
 @media only screen and (max-width : 413px)
     .container, .footer .container, .first-section .container, .header-main .container, .menumain 
         padding: 0 15px
@@ -567,8 +576,6 @@
         left: 13px
     .form-price input
         padding: 17px 40px
-    #btn-change
-        margin-top: 20px
     .card__ads-list
         padding: 10px
         .btn2
@@ -583,15 +590,25 @@
         padding: 20px
     .main-ads .container
         padding: 0 10px
-    .card__ads_img
-        height: 67.6vw
-    .card__ads_content
-        padding: 10px
     .favorites
         top: 10px 
         right: 10px
     .modal-b.active .modal-b_head
         padding: 25px 15px 0
     .modal-b.active #map
-        height: calc(100vh - 173px - 25px - 67.6vw - 20px)
-
+        height: calc(100vh - 80px - 25px)
+    .modal-b
+        .title2, h2
+            font-size: 20px 
+            line-height: 20px
+        .fs-16
+            font-size: 13px
+            line-height: 1
+        .select-item
+            font-size: 14px
+            line-height: 1
+    .card__ads_img
+        height: 185px
+    .card__ads
+        border-width: 5px
+    
