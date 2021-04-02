@@ -15,71 +15,73 @@ block content
 			.container
 				.ads-section_col.list
 					.modal-b.w-100
-						.flex-center-between.mb-5.modal-b_head 
-							div
-								h2.title2.mb-20 55 632 объявлений
-								.d-flex 
-									p.fs-16.mr-5 Сортировка:
-									.select.select-normal.stopPropagation
-										.select-item 
-											span.c-green Рекомендуемые
-											+icon("arrow-down", "c-green")
-										.select-drop
-											ul.select-menu 
-												each val, index in ['Рекомендуемые', 'Популярные']
-													li.select-option(class=index==0?'active':'')=val
-							button.btn4#btn-change(type="button")
-								span.btn-change-list
-									+icon("list","c-green")
-									span.c-green.fw-bold СПИСКОМ
-								span.btn-change-onmap
-									+icon("onmap","c-green")
-									span.c-green.fw-bold НА КАРТЕ
-								
-						#map
-							img(src="img/common/map.jpg", alt="map" width="100%" height="100%") 
-						.ads_scroll-y 
-							- 
-								cardAds = [
-									{
-										img: 'img.jpg',
-										info1: '2-комн.кв.',
-										info2: '40 м² ',
-										info3: '5/12 этаж',
-										place: 'Москва, ул. Ясеневая 27/25',
-										price: '12 700 000 ₽',
-										area: '237 451 ₽/м² ',
-									},
-									{
-										img: 'img.jpg',
-										info1: '2-комн.кв.',
-										info2: '40 м² ',
-										info3: '5/12 этаж',
-										place: 'Москва, ул. Ясеневая 27/25',
-										price: '12 700 000 ₽',
-										area: '237 451 ₽/м² ',
-									},
-									{
-										img: 'img.jpg',
-										info1: '2-комн.кв.',
-										info2: '40 м² ',
-										info3: '5/12 этаж',
-										place: 'Москва, ул. Ясеневая 27/25',
-										price: '12 700 000 ₽',
-										area: '237 451 ₽/м² ',
-									},
-									{
-										img: 'img.jpg',
-										info1: '2-комн.кв.',
-										info2: '40 м² ',
-										info3: '5/12 этаж',
-										place: 'Москва, ул. Ясеневая 27/25',
-										price: '12 700 000 ₽',
-										area: '237 451 ₽/м² ',
-									}
-								]
-							each val in cardAds 
-								+cardAds(val.img,val.info1,val.info2,val.info3,val.place,val.price,val.area)
+						.flex-wrap.modal-b_content
+							#map
+								img(src="img/common/map.jpg", alt="map" width="100%" height="100%") 
+							.col-right
+								.flex-center-between.mb-5.modal-b_head 
+									div
+										h2.title2.mb-20 55 632 объявлений
+										.d-flex 
+											p.fs-16.mr-5 Сортировка:
+											.select.select-normal.stopPropagation
+												.select-item 
+													span.c-green Рекомендуемые
+													+icon("arrow-down", "c-green")
+												.select-drop
+													ul.select-menu 
+														each val, index in ['Рекомендуемые', 'Популярные']
+															li.select-option(class=index==0?'active':'')=val
+									button.btn4#btn-change(type="button")
+										span.btn-change-list
+											+icon("list","c-green")
+											span.c-green.fw-bold СПИСКОМ
+										span.btn-change-onmap
+											+icon("onmap","c-green")
+											span.c-green.fw-bold НА КАРТЕ
+										
+								.ads_scroll-y 
+									- 
+										cardAds = [
+											{
+												img: 'img.jpg',
+												info1: '2-комн.кв.',
+												info2: '40 м² ',
+												info3: '5/12 этаж',
+												place: 'Москва, ул. Ясеневая 27/25',
+												price: '12 700 000 ₽',
+												area: '237 451 ₽/м² ',
+											},
+											{
+												img: 'img.jpg',
+												info1: '2-комн.кв.',
+												info2: '40 м² ',
+												info3: '5/12 этаж',
+												place: 'Москва, ул. Ясеневая 27/25',
+												price: '12 700 000 ₽',
+												area: '237 451 ₽/м² ',
+											},
+											{
+												img: 'img.jpg',
+												info1: '2-комн.кв.',
+												info2: '40 м² ',
+												info3: '5/12 этаж',
+												place: 'Москва, ул. Ясеневая 27/25',
+												price: '12 700 000 ₽',
+												area: '237 451 ₽/м² ',
+											},
+											{
+												img: 'img.jpg',
+												info1: '2-комн.кв.',
+												info2: '40 м² ',
+												info3: '5/12 этаж',
+												place: 'Москва, ул. Ясеневая 27/25',
+												price: '12 700 000 ₽',
+												area: '237 451 ₽/м² ',
+											}
+										]
+									each val in cardAds 
+										+cardAds(val.img,val.info1,val.info2,val.info3,val.place,val.price,val.area)
 					ul.list-cards__ads
 						-var card = 4
 						while card--

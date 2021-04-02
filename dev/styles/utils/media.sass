@@ -120,9 +120,11 @@
         background-position: right -315px center
     .popup-body_row 
         grid-template-columns: repeat(2, 1fr)
-    .ads-section_col
+    .ads-section .col-right
         padding-left: 20px
         max-width: 490px
+    #map
+        width: calc(100% - 490px)
     .slider2 
         display: block   
         width: 395px
@@ -295,8 +297,10 @@
         width: fit-content
         padding: 0 30px
         white-space: nowrap
-    .ads-section_col
+    .ads-section .col-right
         max-width: 440px
+    #map
+        width: calc(100% - 440px)
     .card__ads-list_info
         flex-wrap: wrap
     .slider2
@@ -321,6 +325,8 @@
         z-index: 9
 
 @media only screen and (max-width : 767px)
+    .modal-b_content
+        flex-direction: column-reverse
     .ads_scroll-y 
         max-height: none
         padding-right: 0 
@@ -336,9 +342,10 @@
         position: static
         width: 100%
         margin-top: 20px
-    .ads-section_col
+    .ads-section .col-right
         max-width: 100%
-        padding-left: 0   
+        padding: 0   
+        max-width: 100%
     .card__ads-list
         display: block
         max-width: 100%
